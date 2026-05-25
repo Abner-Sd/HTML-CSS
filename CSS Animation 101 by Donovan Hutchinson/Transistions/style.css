@@ -1,0 +1,170 @@
+#hover1 {
+    border: 10px solid black;
+    width: 80px;
+    padding: 5px;
+    justify-self: center;
+    margin: 10px;
+    text-align: center;
+
+}
+
+#hover1:hover {
+    border-radius: 20px;
+    scale: 2px;
+    background-color: lightblue;
+    transition: all 0.5s ease-in-out;
+}
+
+#animation {
+    border: 3px solid black;
+    padding: 5px;
+    height: 50px;
+    width: 50px;
+    justify-self: center;
+    text-align: center;
+    animation-name: animationExample;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+
+}
+
+@keyframes animationExample {
+    0% {
+        background-color: #555;
+        height: 50px;
+        width: 50px;
+        border-radius: 10%;
+    }
+
+    50% {
+        height: 50px;
+        width: 50px;
+        background-color: lightblue;
+        border-radius: 20%;
+        scale: 1.5px;
+    }
+
+    100% {
+
+        height: 50px;
+        width: 50px;
+        background-color: rgb(50, 183, 228);
+        border-radius: 50%;
+        scale: 2px;
+    }
+
+}
+
+.Timming {
+    animation: backandforth 2s ease-in-out infinite;
+}
+
+@keyframes backandforth {
+    0% {
+        transform: translateX(-14em);
+    }
+
+    50% {
+        transform: translateX(14em);
+    }
+
+    100% {
+        transform: translateX(-14em);
+    }
+}
+
+@keyframes backandforth {
+    0% {
+        transform: translateX(-14em);
+    }
+
+    50% {
+        transform: translateX(14em);
+    }
+
+    100% {
+        transform: translateX(-14em);
+    }
+}
+
+#lineardiv {
+    background: rgb(255, 0, 0);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    justify-self: center;
+    top: calc(50% - 3em);
+    left: calc(50% - 3em);
+    animation: backandforth 5s linear infinite;
+    
+}
+
+#lineardiv:hover {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    transform: translate(-50%, -50%);
+
+}
+
+#easeindiv {
+    background: rgb(65, 155, 42);
+    border-radius: 50%;
+    color: #222;
+    height: 50px;
+    width: 50px;
+    justify-self: center;
+    top: calc(50% - 3em);
+    left: calc(50% - 3em);
+    animation: backandforth 5s ease-in infinite;
+}
+
+#easeindiv:hover {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    transform: translate(-50%, -50%);
+
+}
+
+#easeoutdiv {
+    background: rgb(33, 131, 211);
+    border-radius: 50%;
+    color: #222;
+    height: 50px;
+    width: 50px;
+    justify-self: center;
+    top: calc(50% - 3em);
+    left: calc(50% - 3em);
+    animation: backandforth 5s ease-out infinite;
+}
+
+#easeoutdiv:hover {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    transform: translate(-50%, -50%);
+
+}
+
+#easeinoutdiv {
+    background: rgb(40, 4, 88);
+    border-radius: 50%;
+    color: #222;
+    height: 50px;
+    width: 50px;
+    justify-self: center;
+    top: calc(50% - 3em);
+    left: calc(50% - 3em);
+    animation: backandforth 5s ease-in-out infinite;
+}
+
+#easeinoutdiv:hover {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    transform: translate(-50%, -50%);
+
+}
+

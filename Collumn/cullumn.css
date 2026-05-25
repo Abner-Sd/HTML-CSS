@@ -1,0 +1,36 @@
+body {
+    font-size: 2rem;
+    background-color: grey;
+}
+
+.columns{
+    columns: 4 250px;
+    column-rule: 3px solid black;
+    column-gap: 3rem;
+}
+
+ .columns p{
+    margin-top: 0;
+ }
+
+ .columns h2{
+    margin-top: 0;
+    background-color: rgb(48, 47, 47);
+    color: white;
+    padding: 1rem;
+    break-inside: avoid;
+    break-before: column;
+ }
+
+ .columns .quote{
+    margin-top: 2rem;
+    font-size: 3rem;
+    text-align: center;
+    column-span: all;
+     
+ }
+
+
+ .nowrap{
+    white-space: nowrap;
+ }

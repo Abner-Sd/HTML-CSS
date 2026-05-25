@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.">
+    <title>CSS Transitions Example</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Transition</h1>
+    <p>One way CSS let us control animation is with the <i>TRANSITION</i> property. One example is to change the
+        element's style on hover</p>
+
+    <p id="hover1">Hover me!</p>
+    <br>
+    <hr><br>
+
+    <h1>Animation</h1>
+    <p>Animation let us describe multiple stpes, being A > B > C, while transitions are smoothing the change from state
+        A > B.</p>
+
+    <div id="animation"></div>
+    <p>The animation above has three steps, I can modify thesse steps with the keyframes.</p>
+
+    <br>
+    <hr><br>
+
+    <h1>Timing Functions</h1>
+    <p>Simple put, the time function is the rate at wich the speed of the transitoin changes.</p>
+
+    <h4>Linear</h4>
+    <p>A linear transition moves at a steady rate from beginning to end.</p>
+
+    <div class="linear" id="lineardiv"></div>
+
+    <br>
+
+    <h4>Ease-in</h4>
+    <p>This function begins slowly and accelerates towards the end of the transition.</p>
+    <div class="easein" id="easeindiv"></div>
+
+    <br>
+
+    <h4>Ease-out</h4>
+    <p>Is the oppsite of ease-in. It stars fast and slows down toward the end of the transition.</p>
+
+    <div class="easeout" id="easeoutdiv"></div>
+    <br>
+
+    <h4>Ease-in-out</h4>
+    <p>Ease-ion-out is acombination of both the ease-in and ease-out functions. It begins slowly, accelerates through
+        the middle part of the transition, then slows toward the end.</p>
+
+    <div class="easeinout" id="easeinoutdiv"></div>
+    <br>
+    <hr><br>
+
+    <h1>Multiple Transitions</h1>
+    <h4>Fancy button</h4>
+    <p>In <a href="Multiple Transitions.html" target="_blank">this example</a> a hover effect combines several dchanges
+        of state, but all are defined by a single transition: <br>
+        <strong>transition: transform 0.4s cubic-bezier(.72,-0.61,.25,1.51);</strong>
+    </p>
+
+    <p>The button is made up of two icons and two piecs of text. The Inital (non-hover) state tha is the "Follow me"
+        text and Twitter icon are positoined inside the button. The @ symbol and the "cssanimation" text are positoined
+        outside the button.</p>
+    <p>Then the hover state is added, in wich the elemenst outside the button are positioned inside the button.</p>
+    <br>
+    <h4>Background revel</h4>
+    <p>In <a href="Hover Cat.html" target="_blank">this example</a> there's a card containing some text, and show the
+        text on hover.</p>
+    <br>
+    <hr><br>
+    <h1>Transitions and JavaScript</h1>
+    <h4>Add or remove classes</h4>
+    <p>Since the power of transitions is to animate between
+        two states, we can create those states as separate
+        classes. Then we add or remove these classes using
+        JavaScript. <a href="Box Js.html" target="_blank">Like so.</a></p>
+<p>The example consist of a button and a content <strong>div</strong>. Initially the conten container has the class <strong>hide</strong>. In CSS, the <strong>hide</strong> class gives it a <strong>opacity</strong> of 0.</p>
+<p>We also have a second class in the CSS called <strong>show</strong>.
+    This class has an opacity of 1.
+    When the button is clicked, we toggle the class of the
+    <strong>div</strong> between <strong>hide</strong> and <strong>show</strong>. To give it animation,
+    we apply a <strong>transition</strong> to the <strong>div</strong> also.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
