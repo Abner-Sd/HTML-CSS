@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'idroid';
+    src: url(fontes/idroid.otf);
+}
+
+/*RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*VARIABLES*/
+:root {
+    /*TYPOGRAPHY*/
+    --FF-HEADINGS: 'idroid', sans-serif;
+    --FS: 1rem;
+
+    /*COLORS*/
+    --BGCOLOR-FADE: #C4FFC7;
+    --BGCOLOR: #82CF86;
+    --BGHEADER: linear-gradient(to top,
+            var(--FONT-COLOR), #5d835f);
+
+    --BODY-BGCOLOR: #fff;
+    --BORDER-COLOR: #333;
+    --BGCOLOR-HTML: #75b661;
+    --FONT-COLOR: #173619;
+    --NAV-COLOR: #539756;
+     --FONT-COLOR2: #fff;
+    --HEADER2-COLOR: linear-gradient(to right, var(--BGCOLOR), var(--BGCOLOR-FADE));
+    --LINK-COLOR: #38723b;
+    --HIGHLIGHT-COLOR: var(--BGCOLOR);
+    --LINK-ACTIVE: #0b8811;
+    --LINK-HOVER: #38723b7e;
+
+
+    /*BORDERS*/
+    --BORDERS: 1px solid var(--BORDER-COLOR);
+
+    /*STANDARD PADDING*/
+    --PADDING: 0.25em;
+    --PADDING-SIDE: 2.5%;
+
+    /*STANDARD MARGIN*/
+    --MARGIN: clamp(1em, 2.5vh, 1.5em) 0;
+}
+
+
+/*GENERAL STYLES*/
+
+
+html {
+    background-color: var(--BGCOLOR);
+    font-size: var(--FS);
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--BODY-BGCOLOR);
+    border-left: var(--BORDERS);
+    border-right: var(--BORDERS);
+    box-shadow: 0 0 10px var(--BORDER-COLOR);
+    margin: 0 auto;
+    max-width: 800px;
+    min-height: 100vh;
+}
+
+
+main {
+    background-color: var(--BODY-BGCOLOR);
+    margin-left: var(--BORDERS);
+    margin-right: var(--BORDERS);
+    height: 100vh;
+    width: auto;
+
+}
+
+h2 {
+    font-family: var(--FF-HEADINGS);
+    letter-spacing: 0.1em;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a:any-link {
+    color: var(--LINK-COLOR);
+    font-weight: bold;
+    background-image: var(--HEADER2-COLOR);
+}
+
+a:hover,
+a:focus-visible {
+    color: var(--LINK-HOVER);
+}
+
+a:active {
+    color: var(--LINK-ACTIVE);
+}
+
+/*UTILITY CLASSES*/
+
+.highlight {
+    color: var(--HIGHLIGHT-COLOR);
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+
+/*HEADER*/
+.header{
+    background-image: var(--BGHEADER);
+    color: var(--FONT-COLOR2);
+    text-align: center;
+}
+
+.header__nav{
+    color: var(--NAV-COLOR);
+     font-weight: bold;
+     
+}
+
+.header__ul{
+    padding-top: 5px;
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+    gap: 1rem;
+
+}
+
+/*MAIN*/
+
+
+/*FOOTER*/
+
+
+
+
+
+/* 
+#173619 dark
+#82CF86 medium 
+#C4FFC7 light
+highlight  #67CF6F
+
+color h1, link dark
+bg link medium
+backgroud h2 medium > light
+bgcolor hmtl #FFF3D4 ou #FFE18F
+
+
+
+video 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l2UDgpLz20M?si=J8__6HriqjuU8TqC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+ */
