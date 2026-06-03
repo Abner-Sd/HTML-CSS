@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Background Images</title>
+    <title>Teste Imagens de Fundoo</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+
+        div.quadrado {
+            display: inline-block;
+            border: 2px solid black;
+            border-radius: 15px;
+            background-color: antiquewhite;
+            width: 300px;
+            height: 300px;
+        }
+
+        div#q1 {
+            background-color: aquamarine;
+        }
+
+        div#q2 {
+            background-image: linear-gradient(to bottom, blue, purple);
+        }
+
+        div#q3 {
+            background-image: url('img/pattern001.png');
+            background-size: cover;
+
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="quadrado" id="q1">
+
+
+    </div>
+
+
+    <div class="quadrado" id="q2">
+
+    </div>
+
+
+    <div class="quadrado" id="q3">
+
+    </div>
 </body>
+
 </html>
