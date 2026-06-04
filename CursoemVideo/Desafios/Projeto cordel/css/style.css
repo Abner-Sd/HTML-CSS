@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+/*RESET*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+html,
+body {
+    min-height: 100%
+        /* ou 100vh */
+    ;
+    background-color: grey;
+}
+
+/* VARIABLES*/
+:root {
+    /*FONTS secSriracha h1Passion One pverdana*/
+    --FF-HEADING: 'Passion One', sans-serif;
+    --FF-SEC-P: 'Sriracha', sans-serif;
+    --FF-P: 'Verdana', sans-serif;
+    --FS: 3.5vh;
+    --FS-H1: 10vh;
+    --LINKCOLOR: var(--FONTCOLORHF);
+
+    /*COLORS*/
+    --BGCOLORHF: #000;
+    --BGCOLORSEC: #fff;
+    --BGCOLORSECIMG: #0000002d;
+    --FONTCOLORHF: #fff;
+}
+
+/*UTILITY CLASSES*/ 
+.nowrap {
+    white-space: nowrap;
+}
+
+/*GENERAL STYLES*/
+a:any-link {
+    color: var(--FONTCOLORHF);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+header,
+footer {
+    background-color: var(--BGCOLORHF);
+    text-align: center;
+    padding: 10px;
+}
+
+header>p {
+    padding: 10px;
+}
+
+header>p,
+footer>p {
+    color: var(--FONTCOLORHF);
+    font-size: var(--FS);
+}
+
+header>h1 {
+    font-family: var(--FF-HEADING);
+    font-weight: bolder;
+    font-size: var(--FS-H1);
+    color: var(--FONTCOLORHF);
+    font-variant: small-caps;
+}
+
+h1:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--FF-SEC-P);
+    font-size: var(--FS)
+}
+
+/* Sections with no img */
+
+.noimg {
+    background-color: var(--BGCOLORSEC);
+    color: #000;
+}
+
+/* Sections with img */
+
+section.img{
+     box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.5);
+      background-size: cover;
+      background-attachment: fixed;
+}
+.img>p {
+    background-color: var(--BGCOLORSECIMG);
+    color: #fff;
+    display: inline-block;
+    padding: 5px;
+    padding-bottom: 3em;
+    text-shadow: 2px 2px 0 black;
+}
+
+section#img01 {
+    background-image: url('../img/background001.jpg');
+    background-position: right center;
+
+}
+
+section#img02 {
+    background-image: url('../img/background002.jpg');
+
+}
