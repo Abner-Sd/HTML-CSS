@@ -1,2 +1,2 @@
 # HTML-CSS
-Projetos e atividades HTML5 e CSS3
+Estou aprendendo HTML5 e CSS3, fazendo uso de cursos, livros, vídeos no youtube e sites.

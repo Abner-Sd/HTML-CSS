@@ -15,25 +15,46 @@
             border-collapse: collapse;
         }
 
-        td,th {
+        td,
+        th {
             border: 1px solid black;
             padding: 8px;
             text-align: center;
         }
 
-        .table2{
+        .table2 {
             width: 500px;
             border-collapse: collapse;
-        }
-        
-        thead, tfoot{
-            background-color: bisque;
+            position: relative;
         }
 
-        .num{
+        thead,
+        tfoot {
+            background-color: rgb(158, 144, 127);
+        }
+
+        .table2 > thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: rgb(158, 144, 127);
+        }
+
+        .table2>tbody>tr:nth-child(2n)
+
+        /* odd-even */
+            {
+            background-color: rgb(92, 91, 91);
+        }
+
+        caption {
+            font-size: 1.5em;
+            padding: 10px;
+            background-color: rgb(90, 90, 90);
+        }
+
+        .num {
             text-align: right;
         }
-
     </style>
     <title>Primeira Tabela</title>
 </head>
@@ -45,7 +66,7 @@
             TABLE HEADER = cabeçalho de tabela
             TABLE DATA = dado de tabela -->
 
-            <h1>Tabelas pequenas</h1>
+    <h1>Tabelas pequenas</h1>
     <table class="table1">
         <tr>
             <td>A1</td>
@@ -78,25 +99,25 @@
     TFOOT
         TR, TD, TH  
  -->
-        <br>
-        <hr>
-        <br>
+    <br>
+    <hr>
+    <br>
     <table class="table2">
-       
+        <caption>População das Unidades Federativas</caption>
         <thead>
-            <th>Estado</th>
-            <th>População</th>
+            <th scope="col">Estado</th>
+            <th scope="col" style="width: 80px;">População</th>
         </thead>
         <tbody>
             <tr>
                 <td>São Paulo</td>
                 <td class="num">49 919 049</td>
             </tr>
-              <tr>
+            <tr>
                 <td>Minas Gerais</td>
                 <td class="num">21 168 791</td>
             </tr>
-              <tr>
+            <tr>
                 <td>Rio de Janeiro</td>
                 <td class="num">17 264 943</td>
             </tr>
@@ -171,8 +192,8 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
-                <td  class="num"><strong>206 329 718</strong></td>
+                <th scope="row">Total de Habitantes</th>
+                <td class="num"><strong>206 329 718</strong></td>
             </tr>
         </tfoot>
     </table>
