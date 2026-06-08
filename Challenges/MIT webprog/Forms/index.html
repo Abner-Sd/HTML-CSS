@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Forms</title>
+    <style>
+        body{background-color: grey;}
+    </style>
 </head>
 <body>
    
-Please input your name: <FORM METHOD="post" ACTION="mailto:put.your@email.address.here"></FORM>
-<br>
-Please input your name: <INPUT TYPE="text" SIZE="40" MAXLENGTH="30"
-NAME="personal-name">
+<form method="post" action="mailto:put.your@email.address.here">
+   <p><label for="inome">Please input your name:</label>
+<input type="text" size="40" maxlength="30" name="firstname" name="nome" id="inome" placeholder="Name"></p>
+   
+</form>
 
 </body>
 </html>
