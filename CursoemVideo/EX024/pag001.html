@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site teste</title>
+    <style>
+        body{
+            background-color: rgb(65, 39, 39);
+            color: white;
+        }
+
+        table{
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+   <table>
+    <thead>
+        <tr>
+            <th rowspan="3">Day</th>
+            <th colspan="3"> Seminar</th>
+        </tr>
+
+       <tr>
+        <th colspan="2">Schedule</th>
+        <th rowspan="2">Topic</th>
+        
+       </tr>
+
+       <tr>
+        <th>Begin</th>
+        <th>End</th>
+       </tr>
+    </thead>
+
+<tbody>
+<tr>
+    <th rowspan="2"> Monday</th>
+    <td rowspan="2" style="background-color: orange;">8:00 am</td>
+    <td rowspan="2" style="background-color: blue;">5:00pm</td>
+    <td>Introduction XML</td>
+</tr>
+<tr> 
+    <td>Validity DTD and Relax NG</td>
+</tr>
+
+<tr>
+    <th rowspan="3">Tuesday</th>
+    <td style="background-color: orange;">8:00am</td>
+    <td style="background-color: orange;">11:00am</td>
+    <td rowspan="1">Xpath</td>
+</tr>
+<tr>
+    <td style="background-color: orange;">11:00am</td>
+    <td style="background-color: green;">2:00pm</td>
+    <td rowspan="2">XLS Transformations</td>
+    
+</tr>
+<tr>
+    <td style="background-color: green;">2:00pm</td>
+    <td style="background-color: blue;">5:00pm</td>
+    
+</tr>
+
+<tr>
+    <th>Wednesday</th>
+    <td style="background-color: orange;">8:00am</td>
+    <td style="background-color: green;">12:00pm</td>
+    <td>XSL Formatting Objects</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
