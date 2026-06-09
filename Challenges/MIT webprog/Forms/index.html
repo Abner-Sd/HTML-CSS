@@ -1,20 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forms</title>
     <style>
-        body{background-color: grey;}
+        body {
+            background-color: grey;
+        }
     </style>
 </head>
+
 <body>
-   
-<form method="post" action="mailto:put.your@email.address.here">
-   <p><label for="inome">Please input your name:</label>
-<input type="text" size="40" maxlength="30" name="firstname" name="nome" id="inome" placeholder="Name"></p>
-   
+
+    <form method="post" action="mailto:put.your@email.address.here">
+        <p><label for="inome">Please input your name:</label>
+            <input type="text" size="40" maxlength="30" name="firstname" name="nome" id="inome" placeholder="Name"
+                required>
+        </p>
+
+
+        <p><label for="iemail">Email:</label>
+            <input type="text" name="email" id="iemail" size="40" placeholder="aaa111@gmail.com" required>
+        </p>
+        <p>
+            <label for="isen"> Senha: </label>
+            <input type="password" name="sen" id="isen" placeholder="*************" required>
+        </p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+    <br>
+    <hr><br>
+<form action="post">
+    <h3>Do you agree that Eath orbits the sun?</h3>
+<p><input type="radio" name="orbits" value="strongly_agree" id="isa"><label for="isa">Strongly agree</label></p>
+
+<p><input type="radio" name="orbits" value="agree" id="ia"><label for="ia">Agree</label></p>
+
+<p>
+    <input type="radio" name="orbits" value="no_opinion" id="ino"><label for="ino">No opinion</label> 
+</p>
+
+<p>
+    <input type="radio" name="orbits" value="disagree" id="idisa"> <label for="idisa"> Disagree</label>
+</p>
+
+<p>
+    <input type="radio" name="orbits" value="strongly_disagree" id="isdisa"><label for="isdisa">Strongly desagree</label>
+</p>
 </form>
+<form action="post">
+    <h3>Do you like playing computer games?</h3>
+<p>
+    <input type="radio" name="computer" id="no"> <label for="no">No</label>
+</p>
+<p>
+    <input type="radio" name="computer" id="yes"><label for="yes">Yes</label>
+</p> 
+</form>
+
+<br>
+    <hr><br>
+<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+<label for="vehicle1"> I have a bike</label><br>
+<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+<label for="vehicle2"> I have a car</label><br>
+<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+<label for="vehicle3"> I have a boat</label><br>
+<hr>
+<br>
+<select name="colour"    size="3" multiple  id="col">
+<option value="select">Select a colour</option>
+<option value="red">red</option>
+<option value="blue">blue</option>
+<option value="yellow">yellow</option>
+<option value="green">green</option>
+<option value="purple">purple</option>
+<option value="brown">brown</option>
+
+
+
+
+</select>
 
 </body>
 </html>
