@@ -1,0 +1,42 @@
+body {
+    background-color: black;
+    display: flex;
+    /* Activates Flexbox layout */
+    justify-content: center;
+    /* Centers the box horizontally */
+    align-items: center;
+    /* Centers the box vertically */
+    min-height: 100vh;
+    /* Forces body to take full screen height */
+    margin: 0;
+}
+
+.box {
+    background-color: rgb(179, 4, 179);
+    width: 300px;
+    height: 300px;
+    clip-path: path("M 10,50 L 90,50 A 10,10 0,0,0 100,40 L 100,10  A 10,10 0,0,1 110,0 L 190,0 A 10,10 0,0,1 200,10 L 200,190 A 10,10 0,0,1 190,200 L 10,200 A 10,10 0,0,1 0,190 L 0,60 A 10,10 0,0,1 10,50 Z");
+}
+
+
+/* 
+M means that the drawing will start and Z that it will end.
+Select two points and put the letter L in the middle, meaning a straight line.
+
+10,50 L 90,50
+
+the end point will be the first point
+...L 0,60 L 10,50
+
+If you put the letter A between two points, it will creat an curve line
+
+"M 10,50 L 90,50 L 100,40 L 100,10 L 110,0 L 190,0 L 200,10 L 200,90 L 190,200 L 10,200 L 0,190 L 0,60 L 10,50 Z"
+
+10,10 is the radius of the elipse 
+rotation angle and large arc flag are 0,0
+sweep flag is 0 to make it internal
+
+clip pathe maker
+https://bennettfeely.com/clippy/
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/clip-path
+*/
