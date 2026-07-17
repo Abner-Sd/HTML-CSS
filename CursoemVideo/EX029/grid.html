@@ -8,9 +8,37 @@
         body{
             background-color: grey;
         }
+
+        div.container{
+            border: 3px solid blue;
+
+            display: grid;
+            grid-template: repeat(3, 80px) / repeat(3, auto);
+            grid-auto-rows: 80px;
+            grid-auto-flow: row;
+        }
+
+
+
+        div.item{
+            border: 3px solid rgb(0, 0, 0);
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="item">A</div>
+        <div class="item">B</div>
+        <div class="item">C</div>
+        <div class="item">D</div>
+        <div class="item">E</div>
+        <div class="item">F</div>
+        <div class="item">G</div>
+        <div class="item">H</div>
+        <div class="item">I</div>
+        <div class="item">J</div>
+     
+    </div>
 </body>
 </html>
