@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mdn</title>
+    <style>
+        body{
+            background-color: rgb(255, 255, 255);
+  margin: 40px;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 100px ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    color: #ffffff;
+  }
+
+  .box {
+    background-color: #444;
+    color: #fff8f8;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+  }
+
+  .a {
+    grid-column: col / span  2;
+    grid-row: row ;
+    background-color: rgb(58, 109, 109);
+  }
+  .b {
+    grid-column: col 2 / span  3 ;
+    grid-row: row ;
+    background-color: rgba(255, 228, 196, 0.438);
+  }
+  .c {
+    grid-column: col ;
+    grid-row: 2 ;
+  }
+  .d {
+    grid-column: col 2 / span  3 ;
+    grid-row: row 2 ;
+  }
+
+  .e {
+    grid-column: col / span  5;
+    grid-row: row 3;
+  }
+
+  .f {
+    grid-column: col 3 / span 3;
+    grid-row: row 2  ;
+    background-color: rgba(207, 207, 207, 0.5);
+    z-index: 20;
+  }
+
+    </style>
+</head>
+<body>
+  <div class="wrapper">
+  <div class="box a">A</div>
+  <div class="box b">B</div>
+  <div class="box c">C</div>
+  <div class="box d">D</div>
+  <div class="box e">E</div>
+  <div class="box f">F</div>
+</div>
+</body>
+</html>
