@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minmax</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            /* in the minmax function the fistr value is the minimum size of the track, the second is the maximum.By using 1fr as the maximum value the space is equally distributed. */
+            border-radius: 5px;
+            margin: 30px;
+        }
+
+        .box {
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            font-size: 150%;
+        }
+
+        .container {
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: minmax(200px, 1fr) 200px 200px;
+            border-radius: 5px;
+            margin: 30px;
+        }
+
+        .vox {
+            background-color: #444;
+            color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            font-size: 150%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="box a">A</div>
+        <div class="box b">B</div>
+        <div class="box c">C</div>
+        <div class="box d">D</div>
+        <div class="box e">E</div>
+        <div class="box f">F</div>
+        <div class="box g">G</div>
+        <div class="box h">H</div>
+        <div class="box i">I</div>
+    </div>
+
+    <br><br>
+    <div class="container">
+        <div class="vox a">A</div>
+        <div class="vox b">B</div>
+        <div class="vox c">C</div>
+    </div>
+
+</body>
+
+</html>

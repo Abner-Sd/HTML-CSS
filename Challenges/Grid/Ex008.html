@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas: 
+    "head head head head"
+    "main main ..... side"
+    "foot foot foot foot";
+    grid-gap: 3px;
+    margin: 30px;
+}
+
+.head{
+    grid-area: head;
+}
+.main{
+    grid-area: main;
+}
+.side{
+    grid-area: side;
+}
+.foot{
+    grid-area: foot;
+}
+
+div > div{
+    background-color: #444;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 140%;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="head">Header</div>
+        <div class="side">Sidebar</div>
+        <div class="main">Main</div>
+        <div class="foot">footer</div>
+    </div>
+</body>
+</html>
