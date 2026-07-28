@@ -11,9 +11,13 @@
     --PColor: #767676;
 }
 
+html{
+      height: 100vh;
+    width: 100vw;
+}
+
 header {
     padding: 25px;
-
 }
 
 nav {
@@ -61,7 +65,8 @@ nav>ul>li a:hover,
 
 body {
     background-color: rgb(255, 255, 255);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
 }
 
 main {
@@ -133,9 +138,7 @@ footer {
     justify-content: space-between;
     padding: 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.329);
-    position: fixed;
-    bottom: 0;
-    left: 0;
+  
     width: 100vw;
 }
 
