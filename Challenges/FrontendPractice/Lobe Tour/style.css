@@ -18,6 +18,8 @@ html{
 
 header {
     padding: 25px;
+     grid-column: 2;
+     font-size: 1.6em;
 }
 
 nav {
@@ -60,31 +62,36 @@ nav>ul>li a:hover,
 
 .imglogo {
     height: 60px;
-    width: 80px;
+    width: 90px;
 }
 
 body {
     background-color: rgb(255, 255, 255);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+        display: grid;
+  grid-template-columns: auto 90vw auto;
+  gap: 20px;
   
 }
 
 main {
     text-align: center;
     padding-top: 15px;
+    grid-column: 2;
 }
 
 .first h1,
 .second h1 {
     padding: 10px;
     font-weight: bold;
-    font-size: 3em;
+    font-size: 3.5em;
 }
 
 .first p {
     color: var(--PColor);
-    font-size: 1.3em;
+    font-size: 1.6em;
     padding-bottom: 10px;
+
 }
 
 .tour {
@@ -94,7 +101,7 @@ main {
 #base {
     background-color: #E8EDF0;
     width: 60vw;
-    height: 32vh;
+    height: 60vh;
     border-radius: 20px;
 
     margin: 0 auto;
@@ -107,7 +114,7 @@ main {
 #video {
     width: 90%;
     /* relative to #base, not the viewport */
-    max-height: 85%;
+    max-height: 90%;
     /* keeps it from overflowing the grey box vertically */
     border-radius: 10px;
     object-fit: cover;
@@ -121,6 +128,7 @@ main {
 
 .download {
     background-color: var(--special);
+    font-size: 1.5em;
     color: var(--BG);
     padding: 8px;
     border-radius: 10px;
@@ -138,8 +146,11 @@ footer {
     justify-content: space-between;
     padding: 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.329);
-  
-    width: 100vw;
+  font-size: 1.5em;
+    width: 90vw;
+
+     grid-column: 2;
+     justify-items: center;
 }
 
 footer ul {
@@ -160,6 +171,68 @@ footer a {
     border-radius: 50%;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (max-width: 768px){
+nav {
+    color: var(--PColor);
+    display: flex;
+    flex-flow: row wrap;
+        justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
 
+nav ul {
+    padding: 10px;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li{
+        padding: 10px;
+}
+
+
+    body{
+ display: block;
+}
+
+#base{
+    width: 95vw;
+}
+
+
+    footer ul{
+line-height: 1;
+}
+
+footer {
+    padding: 15px;
+  font-size: 1.3em;
+    width: 90vw;
+    padding: 20px;
+       flex-wrap: wrap;
+}
+
+footer ul{
+    padding: 10px;
+}
+
+}
+
+
+@media screen and (max-width: 1080px){
+    #base{
+        width: 95vw;
+    }
+
+      footer ul{
+line-height: 1.5;
+}
+
+footer div{
+    padding: 8px;
+}
 }
