@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+:root {
+
+    --BG-color: #ffffff;
+    --Font-color: #000000;
+     --Special-color: #0000ff; 
+    --imgGB-color1: #fbffa7;
+       --imgBG-color2: #b6ffc0;
+          --imgBG-color3: #d5b3ff; 
+    --imgBG-color4: #b1c5ff; 
+    --icon-color: #ff764d; 
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--Font-color);
+}
+
+header{
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Hlinks{
+  display: flex;
+  flex-flow: row nowrap;
+gap: 8px;
+align-items: center;
+}
+
+.Hlinks2{
+display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+align-items: center;
+}
+
+body{
+    background-color: grey;
+}
+
+main{
+padding: 10px;
+}
+
+section p{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+section summary{
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.special{
+    color: var(--Special-color);
+}
+
+#grade1{
+    display: grid;
+    grid-template-columns: repeat(2, fr);
+    
+}
+
+#block1{
+background-color: var(--imgGB-color1);
+grid-column: 2;
+}

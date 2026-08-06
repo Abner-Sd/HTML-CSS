@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Broken Grid Layout — Demo</title>
+<style>
+  :root {
+    --white: #ffffff;
+    --yellow: #f7f5c0;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    background: #eeeeee;
+    color: var(--ink);
+    padding: 60px 40px;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px;
+  }
+
+  p.note {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 40px;
+    max-width: 560px;
+    line-height: 1.5;
+  }
+
+  code {
+    background: #ddd;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+
+  /* ---- THE TECHNIQUE ---- */
+
+  /* 1. The "father": a two-column grid */
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    height: 380px;
+    position: relative; /* establishes a positioning context for the breakout image */
+  }
+
+  /* 2. The two "kids" */
+  .panel-a {
+    background: var(--white);
+    border: 1px solid #e5e5e5;
+  }
+
+  .panel-b {
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 3. Image 2 — stays INSIDE its panel, simply centered */
+  .image-walking {
+    width: 55%;
+    height: 65%;
+    background: #2f7a3e;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  /* 4. Image 1 — the one that BREAKS the grid.
+     It's still a child of .panel-a in the HTML,
+     but position: absolute lifts it out of normal flow
+     so it can ignore the panel's boundaries entirely. */
+  .image-music {
+    position: absolute;
+    top: -30px;              /* bleeds above the panel */
+    left: 40px;
+    width: 46%;
+    height: 78%;
+    background: #111;
+    border-radius: 2px;
+    z-index: 2;               /* sits ON TOP of the yellow panel */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .label {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    font-size: 10px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+
+  <h1>Broken Grid Layout</h1>
+  <p class="note">
+    A 2-column <code>display: grid</code> parent holds two colored panels.
+    The walking-girl image stays centered inside its own panel.
+    The music image is <code>position: absolute</code> inside the white panel,
+    so it can bleed past the top edge and cross into the yellow panel — with
+    <code>z-index</code> making sure it layers on top.
+  </p>
+
+  <div class="split">
+    <div class="panel-a">
+      <div class="image-music">image1 (music)</div>
+    </div>
+    <div class="panel-b">
+      <div class="image-walking">image2 (walking)</div>
+    </div>
+  </div>
+
+</body>
+</html>
