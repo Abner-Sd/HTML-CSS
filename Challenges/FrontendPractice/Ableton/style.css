@@ -4,82 +4,141 @@
 
     --BG-color: #ffffff;
     --Font-color: #000000;
-     --Special-color: #0000ff; 
+    --Special-color: #0000ff;
     --imgGB-color1: #fbffa7;
-       --imgBG-color2: #b6ffc0;
-          --imgBG-color3: #d5b3ff; 
-    --imgBG-color4: #b1c5ff; 
-    --icon-color: #ff764d; 
+    --imgBG-color2: #b6ffc0;
+    --imgBG-color3: #d5b3ff;
+    --imgBG-color4: #b1c5ff;
+    --icon-color: #ff764d;
 }
 
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-li{
+li {
     list-style: none;
 }
 
-a{
+a {
     text-decoration: none;
     color: var(--Font-color);
 }
 
-header{
+header {
     padding: 14px;
     display: flex;
     justify-content: space-between;
 }
 
-.Hlinks{
-  display: flex;
-  flex-flow: row nowrap;
-gap: 8px;
-align-items: center;
+.Hlinks {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+    align-items: center;
 }
 
-.Hlinks2{
-display: flex;
-  flex-flow: row nowrap;
-  gap: 8px;
-align-items: center;
+.Hlinks2 {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+    align-items: center;
 }
 
-body{
-    background-color: grey;
+main {
+    padding: 10px;
+}
+main .ableton{
+    display: block;
+    margin: auto;
 }
 
-main{
-padding: 10px;
-}
-
-section p{
+section p {
     font-size: 1.5em;
     text-align: center;
 }
 
-section summary{
+section summary {
     font-size: 0.9em;
     text-align: center;
 }
 
-.special{
+.special {
     color: var(--Special-color);
 }
 
-#grade1{
+#grade1 {
     display: grid;
-    grid-template-columns: repeat(2, fr);
-    
+    grid-template-columns: 1fr 1fr;
+    max-width: 90%;
+    min-width: 600px;
+ height: 500px;      /* pick a height that matches your intended image sizes, not the other way around */
+    position: relative;
+
 }
 
-#block1{
-background-color: var(--imgGB-color1);
-grid-column: 2;
+#block1 {
+    background-color: var(--BG-color);
+}
+
+#block1 img {
+    position: absolute;
+    
+left:clamp(32px, 35%, 189px);
+top: clamp(10px, 4%, -30px);
+ width: 48%;          /* ← explicit width, relative to #grade1's width */
+    height: 85%;
+    object-fit: contain;   /* crops nicely instead of squishing */
+    z-index: 2;
+
+}
+
+#block2 {
+    background-color: var(--imgGB-color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#block2 img {
+    width: 55%;
+    height: 65%;
+    object-fit: cover;
+}
+
+#grade2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+#grade2 img{
+    object-fit: cover;
+    width: 55%;
+    height: 65%;
+}
+
+#grade3{
+    display: grid;
+    grid-template-columns: 1fr 500px;
+     max-width: 90%;
+    min-width: 600px;
+ height: 500px;
+    position: relative;
+}
+
+.block31{
+    background-color: var(--imgBG-color2);
+}
+
+.block32{
+    background-color: var(--BG-color);
 }
