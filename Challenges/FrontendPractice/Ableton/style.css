@@ -59,12 +59,15 @@ main .ableton{
     margin: auto;
 }
 
-section p {
-    font-size: 1.5em;
+section{
+    padding: 30px;
+}
+
+section h3 {
     text-align: center;
 }
 
-section summary {
+section .subtitle {
     font-size: 0.9em;
     text-align: center;
 }
@@ -142,3 +145,4 @@ top: clamp(10px, 4%, -30px);
 .block32{
     background-color: var(--BG-color);
 }
+
