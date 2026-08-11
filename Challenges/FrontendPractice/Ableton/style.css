@@ -54,12 +54,13 @@ header {
 main {
     padding: 10px;
 }
-main .ableton{
+
+main .ableton {
     display: block;
     margin: auto;
 }
 
-section{
+section {
     padding: 30px;
 }
 
@@ -76,12 +77,15 @@ section .subtitle {
     color: var(--Special-color);
 }
 
+/* Girl and music pad with girl walking beginning */
 #grade1 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 90%;
-    min-width: 600px;
- height: 500px;      /* pick a height that matches your intended image sizes, not the other way around */
+    grid-template-columns: 1fr 2fr;
+    width: 90%;
+    max-width: 900px;
+    min-width: 340px;
+    aspect-ratio: 800 / 420;
+    margin: 0 auto;
     position: relative;
 
 }
@@ -92,14 +96,15 @@ section .subtitle {
 
 #block1 img {
     position: absolute;
-    
-left:clamp(32px, 35%, 189px);
-top: clamp(10px, 4%, -30px);
- width: 48%;          /* ← explicit width, relative to #grade1's width */
-    height: 85%;
-    object-fit: contain;   /* crops nicely instead of squishing */
+    top: clamp(-40px, -3%, -16px);
+    left: clamp(16px, 3%, 60px);
+    width: clamp(140px, 46%, 420px);
+    height: 80%;
+    object-fit: cover;
+    border-radius: 2px;
     z-index: 2;
-
+    background: #353434;
+    /* shows while the real image loads, or if the path is wrong */
 }
 
 #block2 {
@@ -113,36 +118,89 @@ top: clamp(10px, 4%, -30px);
     width: 55%;
     height: 65%;
     object-fit: cover;
+    border-radius: 2px;
+    background: #447a2f;
+    /* shows while the real image loads, or if the path is wrong */
 }
+/* Girl and music pad with girl walking ending */
 
-#grade2{
+/* Guy talking beginning */
+#grade2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 80%;
+    width: 90%;
+    margin: auto;
 }
 
-#grade2 img{
+#grade2 img {
     object-fit: cover;
     width: 55%;
-    height: 65%;
+    height: 66%;
 }
+/* Guy talking ending */
 
-#grade3{
+/* Professor and Ableton door beginning */
+#grade3 {
     display: grid;
-    grid-template-columns: 1fr 500px;
-     max-width: 90%;
-    min-width: 600px;
- height: 500px;
+    grid-template-columns: 2fr 1fr;
+    width: 100vw;
+    max-width: 90%;
+    min-width: 340px;
+    margin: 0 auto;
     position: relative;
 }
 
-.block31{
+.block31 {
     background-color: var(--imgBG-color2);
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 20px;
 }
 
-.block32{
+.block31 img{
+    width: 45%;
+    height: 40%;
+    object-fit: cover;
+    border-radius: 2px;
+    background: #447a2f;
+    /* shows while the real image loads, or if the path is wrong */
+}
+
+.block32 {
     background-color: var(--BG-color);
 }
 
+.block32 img{
+position: absolute;
+
+}
+
+/* Professor and Ableton door ending */
+
+
+@media (max-width: 480px) {
+    .split {
+        grid-template-columns: 1fr;
+        aspect-ratio: auto;
+        height: auto;
+        gap: 12px;
+    }
+
+    .panel-a,
+    .panel-b {
+        aspect-ratio: 4 / 3;
+    }
+
+    .image-music {
+        position: static;
+        width: 90%;
+        height: 80%;
+        margin: 5% auto;
+        box-shadow: none;
+    }
+}

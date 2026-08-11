@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Broken Grid Layout — Responsive Demo</title>
+<style>
+  :root {
+    --white: #ffffff;
+    --yellow: #f7f5c0;
+    --ink: #1a1a1a;
+    --muted: #6b6b6b;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, "Helvetica Neue", Arial, sans-serif;
+    background: #eeeeee;
+    color: var(--ink);
+    padding: 60px 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    text-align: center;
+  }
+
+  p.note {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 auto 40px;
+    max-width: 600px;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  code {
+    background: #ddd;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+
+  /* ---- THE TECHNIQUE ---- */
+
+  /* 1. The "father": a two-column grid.
+     min-width stops it collapsing so small the overlap breaks. */
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    max-width: 900px;
+    min-width: 340px;
+    aspect-ratio: 900 / 420;   /* keeps proportions consistent at any width */
+    margin: 0 auto;
+    position: relative;
+  }
+
+  /* 2. The two "kids" */
+  .panel-a {
+    /* deliberately NOT position: relative — .image-music needs to size
+       itself against the whole .split grid (its nearest positioned
+       ancestor) so its % width is wide enough to cross into panel-b. */
+  }
+
+  .panel-b {
+    background: var(--yellow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* 3. Image 2 — stays INSIDE its panel, fluid width via %, no fixed px */
+  .image-walking {
+    width: 55%;
+    height: 65%;
+    object-fit: cover;
+    border-radius: 2px;
+    background: #2f7a3e; /* shows while the real image loads, or if the path is wrong */
+  }
+
+  /* 4. Image 1 — breaks the grid.
+     Every offset uses % or clamp() instead of fixed px,
+     so the gap between the two images scales with the container
+     instead of staying frozen at one size. */
+  .image-music {
+    position: absolute;
+    top: clamp(-40px, -3%, -16px);
+    left: clamp(16px, 6%, 60px);
+    width: clamp(140px, 46%, 420px);
+    height: 78%;
+    object-fit: cover;
+    border-radius: 2px;
+    z-index: 2;
+    background: #111; /* shows while the real image loads, or if the path is wrong */
+  }
+
+  /* 5. Safety net: below a certain width, the overlap gets too cramped
+     no matter what units you use — better to stop fighting it and
+     stack the panels instead. */
+  @media (max-width: 480px) {
+    .split {
+      grid-template-columns: 1fr;
+      aspect-ratio: auto;
+      height: auto;
+      gap: 12px;
+    }
+    .panel-a, .panel-b {
+      aspect-ratio: 4 / 3;
+    }
+    .image-music {
+      position: static;
+      width: 90%;
+      height: 80%;
+      margin: 5% auto;
+      box-shadow: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <h1>Broken Grid Layout — Responsive</h1>
+  <p class="note">
+    Resize this window (or open dev tools and drag the viewport) — the gap
+    between the two images stays proportional instead of collapsing, because
+    every offset uses <code>%</code> / <code>clamp()</code> instead of fixed
+    <code>px</code>. Below 480px the layout gives up on overlapping and
+    stacks the panels instead.
+  </p>
+
+  <div class="split">
+    <div class="panel-a">
+      <img class="image-music" src="img/girl and machine .png" alt="Person using a music production pad">
+    </div>
+    <div class="panel-b">
+      <img class="image-walking" src="img/girl walking.png" alt="Person walking past a shelf display">
+    </div>
+  </div>
+
+</body>
+</html>
