@@ -177,10 +177,64 @@ section .subtitle {
 
 .block32 img{
 position: absolute;
+top: clamp(60px, 47.8641px + 3.2362vw, 110px);
+left: clamp(163px, -23.4078px + 49.7087vw, 931px);
+width: clamp(102px, -6.7379px + 28.9968vw, 550px);
 
 }
 
 /* Professor and Ableton door ending */
+
+/* Video 2 beginning*/
+#grade4{
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+}
+
+#grade4 img {
+    object-fit: cover;
+    width: 55%;
+    height: 66%;
+}
+/* Video 2 ending*/
+
+/* Grade 5 beginning*/
+#grade5{
+    display: grid;
+    grid-template-columns: 10px 2fr 10px;
+    width: 90%;
+    max-width: 900px;
+    min-width: 340px;
+    height: 570px;
+    margin: auto;
+    position: relative;
+}
+
+.block51,
+.block53{
+    z-index: 1;
+}
+
+.block51 img{
+    object-fit: cover;
+}
+
+.block52{
+background-color: var(--imgBG-color3);
+columns: 2;
+}
+
+.block53 img{
+    object-fit: cover;
+}
+
+
+
+/* Grade 5 ending */
 
 
 @media (max-width: 480px) {
