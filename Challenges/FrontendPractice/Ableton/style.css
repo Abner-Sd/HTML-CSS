@@ -56,14 +56,14 @@ main {
 }
 
 main .divable {
-       display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
 
 }
 
-.divable img{
+.divable img {
     object-fit: cover;
     max-width: 100%;
     height: auto;
@@ -131,6 +131,7 @@ section .subtitle {
     background: #447a2f;
     /* shows while the real image loads, or if the path is wrong */
 }
+
 /* Girl and music pad with girl walking ending */
 
 /* Guy talking beginning */
@@ -148,6 +149,7 @@ section .subtitle {
     width: 55%;
     height: 66%;
 }
+
 /* Guy talking ending */
 
 /* Professor and Ableton door beginning */
@@ -171,7 +173,7 @@ section .subtitle {
     padding: 20px;
 }
 
-.block31 img{
+.block31 img {
     width: 45%;
     height: 40%;
     object-fit: cover;
@@ -184,19 +186,19 @@ section .subtitle {
     background-color: var(--BG-color);
 }
 
-.block32 img{
-position: absolute;
-top: clamp(60px, 47.8641px + 3.2362vw, 110px);
-left: clamp(163px, -23.4078px + 49.7087vw, 931px);
-width: clamp(102px, -6.7379px + 28.9968vw, 550px);
+.block32 img {
+    position: absolute;
+    top: clamp(60px, 47.8641px + 3.2362vw, 110px);
+    left: clamp(163px, -23.4078px + 49.7087vw, 931px);
+    width: clamp(102px, -6.7379px + 28.9968vw, 550px);
 
 }
 
 /* Professor and Ableton door ending */
 
 /* Video 2 beginning*/
-#grade4{
- display: flex;
+#grade4 {
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -209,10 +211,11 @@ width: clamp(102px, -6.7379px + 28.9968vw, 550px);
     width: 55%;
     height: 66%;
 }
+
 /* Video 2 ending*/
 
 /* Grade 5 beginning*/
-#grade5{
+#grade5 {
     display: grid;
     grid-template-columns: 10px 2fr 10px;
     width: 100vw;
@@ -224,62 +227,98 @@ width: clamp(102px, -6.7379px + 28.9968vw, 550px);
 }
 
 .block51,
-.block53{
+.block53 {
     z-index: 1;
 }
 
-.block51 img{
+.block51 img {
     position: absolute;
     object-fit: cover;
- top: clamp(86px, 77.0194px + 2.3948vw, 123px);
-left: clamp(-84px, -366.66px + 14.04vw, 133px);
-width: clamp(330px, 289.9515px + 10.6796vw, 495px);
+    top: clamp(86px, 77.0194px + 2.3948vw, 123px);
+    left: clamp(-84px, -366.66px + 14.04vw, 133px);
+    width: clamp(330px, 289.9515px + 10.6796vw, 495px);
     height: auto;
 }
 
-.block52{
-background-color: var(--imgBG-color3);
-columns: 2; 
+.block52 {
+    background-color: var(--imgBG-color3);
+    columns: 2;
 }
 
-.block53 img{
-      position: absolute;
-  object-fit: cover;
-     top: clamp(40px, 52.4272px + -0.6472vw, 50px);
-     left:clamp(305px, 238.2524px + 17.7994vw, 580px);
-     width: clamp(338px, 302.0777px + 9.5793vw, 486px);
+.block53 img {
+    position: absolute;
+    object-fit: cover;
+    top: clamp(40px, 52.4272px + -0.6472vw, 50px);
+    left: clamp(305px, 238.2524px + 17.7994vw, 580px);
+    width: clamp(338px, 302.0777px + 9.5793vw, 486px);
     height: auto;
 }
+
 /* Grade 5 ending */
 
 /* Grade 6 beginning */
-#grade6{
-display: grid;
-grid-template-columns: 1fr 1fr;
-margin: auto;
-height: 470px;
-width: 100%;
-}
-
-.textlink{
-    background-color: var(--imgBG-color4);
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-.blurred{
+#grade6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    height: 470px;
     width: 100%;
+    gap: 0px;
+}
+
+.textlink {
+    background-color: var(--imgBG-color4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 475px;
+    padding: 0 40px;
+}
+
+.blurred {
     height: 100%;
 }
 
-.blurred img{
+.blurred img {
+    display: block;
     object-fit: cover;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    height: 475px;
 }
 
 /* Grade 6 ending */
+
+/* Prefoot beginning*/
+
+.headprefoot{
+    padding: 40px;
+}
+
+.prefoot {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(2, 1fr);
+margin: auto;
+}
+
+.row2{
+    grid-row: 1;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+        padding-bottom: 20px;
+}
+
+.row3{
+  grid-row: 2;
+  display: flex;
+    flex-flow: row nowrap;
+ justify-content: space-between;
+}
+
+
+/* Prefoot ending*/
 
 
 @media (max-width: 480px) {
