@@ -55,9 +55,18 @@ main {
     padding: 10px;
 }
 
-main .ableton {
-    display: block;
-    margin: auto;
+main .divable {
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+
+}
+
+.divable img{
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
 }
 
 section {
@@ -206,7 +215,7 @@ width: clamp(102px, -6.7379px + 28.9968vw, 550px);
 #grade5{
     display: grid;
     grid-template-columns: 10px 2fr 10px;
-    width: 90%;
+    width: 100vw;
     max-width: 900px;
     min-width: 340px;
     height: 570px;
@@ -220,21 +229,57 @@ width: clamp(102px, -6.7379px + 28.9968vw, 550px);
 }
 
 .block51 img{
+    position: absolute;
     object-fit: cover;
+ top: clamp(86px, 77.0194px + 2.3948vw, 123px);
+left: clamp(-84px, -366.66px + 14.04vw, 133px);
+width: clamp(330px, 289.9515px + 10.6796vw, 495px);
+    height: auto;
 }
 
 .block52{
 background-color: var(--imgBG-color3);
-columns: 2;
+columns: 2; 
 }
 
 .block53 img{
-    object-fit: cover;
+      position: absolute;
+  object-fit: cover;
+     top: clamp(40px, 52.4272px + -0.6472vw, 50px);
+     left:clamp(305px, 238.2524px + 17.7994vw, 580px);
+     width: clamp(338px, 302.0777px + 9.5793vw, 486px);
+    height: auto;
+}
+/* Grade 5 ending */
+
+/* Grade 6 beginning */
+#grade6{
+display: grid;
+grid-template-columns: 1fr 1fr;
+margin: auto;
+height: 470px;
+width: 100%;
 }
 
+.textlink{
+    background-color: var(--imgBG-color4);
+display: flex;
+justify-content: center;
+align-items: center;
+}
 
+.blurred{
+    width: 100%;
+    height: 100%;
+}
 
-/* Grade 5 ending */
+.blurred img{
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Grade 6 ending */
 
 
 @media (max-width: 480px) {
