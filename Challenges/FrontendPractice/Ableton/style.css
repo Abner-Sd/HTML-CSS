@@ -290,36 +290,85 @@ section .subtitle {
 /* Grade 6 ending */
 
 /* Prefoot beginning*/
+.prefoot {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-areas: 
+"headprefoot headprefoot headprefoot"
+"regis educ sing"
+"cummu distri lang";
+grid-gap: 10px;
+}
 
 .headprefoot{
     padding: 40px;
+    grid-area: headprefoot;
 }
 
-.prefoot {
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: repeat(2, 1fr);
-margin: auto;
+.regis{
+grid-area: regis;
+}
+.educ{
+grid-area: educ;
+}
+.sing{
+grid-area: sing;
+}
+.signup{
+    background-color: blue;
+    color: white;
 }
 
-.row2{
-    grid-row: 1;
+.cummu{
+grid-area: cummu;
+}
+.distri{
+grid-area: distri;
+}
+.lang{
+grid-area: lang;
+}
+
+.twitter{
+color: rgb(90, 149, 236);
+font-size: 2em;
+}
+.youtube{
+color: red;
+font-size: 2em;
+}
+.face{
+color: #0000ff;
+font-size: 2em;
+}
+.insta{
+color: plum;
+font-size: 2em;
+}
+
+ /* Prefoot ending*/
+footer{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-        padding-bottom: 20px;  
+    align-items: center;
 }
 
-.row3{
-  grid-row: 2;
-  display: flex;
+.footdiv,
+.footdiv2{
+    display: flex;
     flex-flow: row nowrap;
- justify-content: space-between;
+    gap: 10px;
+
+    font-size: .7em;
+    font-weight: bold;
+    align-items: center;
 }
 
-
-/* Prefoot ending*/
-
+.footlogo{
+    height: 30px;
+    width: 30px;
+}
 
 @media (max-width: 480px) {
     .split {
