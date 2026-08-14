@@ -79,3 +79,84 @@ header a {
     background-color: var(--black);
 
 }
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 45px;
+    max-width: 1000px;
+    /* defina a largura máxima que quiser */
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.conteudo {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.conteudo h3 {
+    margin: 0 0 8px 0;
+}
+
+.conteudo p {
+    margin: 0 0 12px 0;
+}
+
+.conteudo a {
+    display: inline-block;
+}
+
+footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    gap: 80px;
+    padding: 20px 50px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+footer>div {
+    flex: 1;
+}
+
+footer h4 {
+    margin-bottom: 12px;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.col5 {
+    align-self: flex-end;
+}
+
+@media screen and (max-width: 650px) {
+    header {
+        flex-flow: column nowrap;
+        gap: 23px;
+        align-items: center;
+    }
+
+    .wrapper{
+        grid-template-columns: 1fr;
+        padding: 25px;
+        max-width: 100%;
+        row-gap: 30px;
+    }
+
+    footer{
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         gap: 10px;
+    }
+}
