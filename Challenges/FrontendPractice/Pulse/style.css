@@ -5,6 +5,11 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+@font-face {
+  font-family: 'GrungeFont';
+  src: url('your-grunge-font.woff2') format('woff2');
+}
+
 :root {
     --highlight: #00ad64;
     --green: #1fe374;
@@ -70,11 +75,193 @@ padding: 15px;
     font-size: .8em;
 }
 
+.panels{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 20px;
+}
+
+.btnmain{
+    background-color: var(--green);
+    color: var(--black);
+    border: none;
+    padding: 10px 25px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.btnmain:hover{
+    cursor: pointer;
+    color: var(--white);
+}
 
 
+/* Right Panel beginning */
+.rightpanel{
+height: 350px;
+width: 229px;
+margin: 30px;
+}
+
+.rightpanel h2{
+color: var(--green);
+font-weight: bold;
+font-size: 1em;
+padding-bottom: 5px;
+}
+
+.rightpanel li{
+font-size: small;
+}
+
+.rightpanel p{
+    padding-top: 10px;
+}
+
+.rightpanel a{
+    color: var(--black);
+}
+/* Right Panel ending */
+
+/* Center Panel ending */
+.centerpanel{
+    background-color: var(--white);
+border: 1px solid var(--green);
+border-radius: 15px;
+width: 350px;
+margin-top: -20px;
+margin-bottom: -20px;
+ padding: 32px 24px;
+height: fit-content;
+    overflow: hidden;
+text-align: center;
+}
+
+.centerpanel p{
+background-color: var(--green);
+color: var(--white);
+font-size: small;
+ margin: -33px -24px 16px -24px;
+ padding: 6px 0;
+}
+
+.centerpanel h2{
+    color: var(--green);
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.centerpanel h3{
+    color: var(--darkwhite);
+    font-size: 1em;
+    padding-bottom: 10px;
+}
+
+.centerpanel h6{
+    font-size: .6em;
+    margin: 10px;
+}
+
+.centerpanel ul{
+    margin-bottom: 15px; 
+}
+
+.centerpanel li{
+list-style-position: inside;
+padding: 10px;
+list-style: none;
+}
+
+.centerpanel li::before {
+    content: '✓';
+    font-weight: bold;
+    color: var(--green);
+    margin-right: 8px;
+}
+
+/* Center Panel ending */
+
+/* Left Panel ending */
+.leftpanel{
+    background-color: var(--white);
+    height: fit-content;
+    text-align: center;
+    width: 290px;
+}
+.leftpanel p{
+    background-color: var(--darkwhite);
+    padding: 10px;
+    font-size: .7em;
+}
+
+.leftpanel h2{
+    color: var(--green);
+    font-weight: lighter;
+    padding: 10px;
+}
+
+.leftpanel h3{
+    color: var(--darkwhite);
+    font-size: 1em;
+    padding-bottom: 10px;
+}
+
+.leftpanel h6{
+    font-size: .6em;
+    margin: 10px;
+}
+
+.leftpanel li{
+    list-style-position: inside;
+    padding: 10px;
+    list-style: none;
+
+}
+
+.leftpanel li::before{
+        content: '✓';
+    font-weight: bold;
+    color: var(--green);
+    margin-right: 8px;
+}
+/* Left Panel ending */
+
+.endpanel{
+    text-align: center;
+    padding: 30px;
+}
+
+.endpanel .circle{
+  font-family: 'GrungeFont', sans-serif;
+    background-color: var(--darkwhite);
+     display: inline-block;
+    height: 80px;
+    width: 80px;
+        border-radius: 50%;
+    padding: 25px;
+    color: var(--white);
+}
+
+.endpanel p{
+    padding-top: 10px;
+}
+
+.endpanel .subvert{
+    color: var(--green);
+    font-size: .7em;
+}
 
 .faq {
-    background-color: var(--darkwhite);
+    background-color: var(--white);
+padding: 10px;
+margin: auto;
+}
+
+.faq .questions{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
 }
 
 footer {
