@@ -5,11 +5,6 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-@font-face {
-  font-family: 'GrungeFont';
-  src: url('your-grunge-font.woff2') format('woff2');
-}
-
 :root {
     --highlight: #00ad64;
     --green: #1fe374;
@@ -25,6 +20,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+}
+
+header .headlogo {
+    font-size: 3em;
+    color: var(--highlight);
 }
 
 header ul {
@@ -62,27 +62,27 @@ header,
     background-color: var(--bgcolor);
 }
 
-.title{
-text-align: center;
-padding: 15px;
+.title {
+    text-align: center;
+    padding: 15px;
 }
 
-.title h1{
+.title h1 {
     font-size: 2.7em;
 }
 
-.title p{
-    font-size: .8em;
+.title p {
+    font-size: .9em;
 }
 
-.panels{
- display: flex;
- justify-content: center;
- align-items: center;
- margin: 20px;
+.panels {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }
 
-.btnmain{
+.btn {
     background-color: var(--green);
     color: var(--black);
     border: none;
@@ -91,86 +91,87 @@ padding: 15px;
     margin: 10px;
 }
 
-.btnmain:hover{
+.btn:hover {
     cursor: pointer;
     color: var(--white);
 }
 
 
 /* Right Panel beginning */
-.rightpanel{
-height: 350px;
-width: 229px;
-margin: 30px;
+.rightpanel {
+    height: 350px;
+    width: 229px;
+    margin: 30px;
 }
 
-.rightpanel h2{
-color: var(--green);
-font-weight: bold;
-font-size: 1em;
-padding-bottom: 5px;
+.rightpanel h2 {
+    color: var(--green);
+    font-weight: bold;
+    font-size: 1em;
+    padding-bottom: 5px;
 }
 
-.rightpanel li{
-font-size: small;
+.rightpanel li {
+    font-size: small;
 }
 
-.rightpanel p{
+.rightpanel p {
     padding-top: 10px;
 }
 
-.rightpanel a{
+.rightpanel a {
     color: var(--black);
 }
+
 /* Right Panel ending */
 
 /* Center Panel ending */
-.centerpanel{
+.centerpanel {
     background-color: var(--white);
-border: 1px solid var(--green);
-border-radius: 15px;
-width: 350px;
-margin-top: -20px;
-margin-bottom: -20px;
- padding: 32px 24px;
-height: fit-content;
+    border: 1px solid var(--green);
+    border-radius: 15px;
+    width: 350px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    padding: 32px 24px;
+    height: fit-content;
     overflow: hidden;
-text-align: center;
+    text-align: center;
 }
 
-.centerpanel p{
-background-color: var(--green);
-color: var(--white);
-font-size: small;
- margin: -33px -24px 16px -24px;
- padding: 6px 0;
+.centerpanel p {
+    background-color: var(--green);
+    color: var(--white);
+    font-size: small;
+    margin: -33px -24px 16px -24px;
+    padding: 6px 0;
 }
 
-.centerpanel h2{
+.centerpanel h2 {
     color: var(--green);
     font-weight: bold;
     font-size: 2em;
 }
 
-.centerpanel h3{
+.centerpanel h3 {
     color: var(--darkwhite);
     font-size: 1em;
     padding-bottom: 10px;
 }
 
-.centerpanel h6{
+.centerpanel h6 {
     font-size: .6em;
     margin: 10px;
 }
 
-.centerpanel ul{
-    margin-bottom: 15px; 
+.centerpanel ul {
+    margin-bottom: 15px;
 }
 
-.centerpanel li{
-list-style-position: inside;
-padding: 10px;
-list-style: none;
+.centerpanel li {
+    list-style-position: inside;
+    padding: 10px;
+    list-style: none;
 }
 
 .centerpanel li::before {
@@ -183,87 +184,231 @@ list-style: none;
 /* Center Panel ending */
 
 /* Left Panel ending */
-.leftpanel{
+.leftpanel {
     background-color: var(--white);
     height: fit-content;
     text-align: center;
     width: 290px;
 }
-.leftpanel p{
+
+.leftpanel p {
     background-color: var(--darkwhite);
     padding: 10px;
     font-size: .7em;
 }
 
-.leftpanel h2{
+.leftpanel h2 {
     color: var(--green);
     font-weight: lighter;
     padding: 10px;
 }
 
-.leftpanel h3{
+.leftpanel h3 {
     color: var(--darkwhite);
     font-size: 1em;
     padding-bottom: 10px;
 }
 
-.leftpanel h6{
+.leftpanel h6 {
     font-size: .6em;
     margin: 10px;
 }
 
-.leftpanel li{
+.leftpanel li {
     list-style-position: inside;
     padding: 10px;
     list-style: none;
 
 }
 
-.leftpanel li::before{
-        content: '✓';
+.leftpanel li::before {
+    content: '✓';
     font-weight: bold;
     color: var(--green);
     margin-right: 8px;
 }
+
 /* Left Panel ending */
 
-.endpanel{
+.endpanel {
     text-align: center;
     padding: 30px;
 }
 
-.endpanel .circle{
-  font-family: 'GrungeFont', sans-serif;
+.endpanel .circle {
+    font-family: 'GrungeFont', sans-serif;
     background-color: var(--darkwhite);
-     display: inline-block;
+    display: inline-block;
     height: 80px;
     width: 80px;
-        border-radius: 50%;
+    border-radius: 50%;
     padding: 25px;
     color: var(--white);
 }
 
-.endpanel p{
+.endpanel p {
     padding-top: 10px;
 }
 
-.endpanel .subvert{
+.endpanel .subvert {
     color: var(--green);
     font-size: .7em;
 }
 
 .faq {
     background-color: var(--white);
-padding: 10px;
-margin: auto;
+    padding: 10px;
 }
 
-.faq .questions{
+.faq .faqtitle {
+    padding-top: 20px;
+    margin: 20px;
+}
+
+.faq .questions {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    gap: 20px;
+     margin: 25px auto;
+    align-items: first baseline;
+    padding-bottom: 20px;
+    padding: 10px;
 }
 
 footer {
     background-color: var(--black);
+}
+
+.footer h4 {
+    color: var(--white);
+}
+
+.footer a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.columns {
+    display: flex;
+    justify-content: row nowrap;
+    gap: 30px;
+    padding: 20px;
+}
+
+.columns li {
+    list-style: none;
+    line-height: 40px;
+}
+
+.logobtn {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logobtn .footlogo {
+    color: var(--green);
+    background-color: var(--black);
+    font-size: 3em;
+    padding: 20px;
+}
+
+.footend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding: 0px 10px;
+
+}
+
+.rights p {
+    color: grey;
+    font-size: .7em;
+    padding: 0px 10px;
+}
+
+.rights a {
+    color: grey;
+}
+
+.footend .contact {
+    color: var(--white);
+    border: 2px solid var(--white);
+    padding: 4px 8px;
+    margin: 10px;
+}
+
+@media screen and (max-width: 480px) {
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header li{
+    font-size: .8em;
+}
+    .panels{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .rightpanel{
+        margin-bottom: -12px;
+    }
+
+.rightpanel h2{
+    font-size: 1.2em;
+}
+
+    .rightpanel li{
+                font-size: .9em;
+    }
+
+.centerpanel{
+    margin-top: 170px;
+}
+
+.leftpanel{
+    margin-top: 40px;
+}
+
+.faqtitle{
+    text-align: center;
+}
+
+.faq .questions{
+    grid-template-columns: 1fr;
+}
+
+.footer{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+.footend{
+    flex-flow: column-reverse;
+    gap: 10px;
+}
+}
+
+
+@media screen and (min-width: 1920px){
+    header{
+        justify-content: space-around;
+    }
+
+    .footer{
+            justify-content: space-evenly;
+    }
 }
