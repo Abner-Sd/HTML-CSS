@@ -25,19 +25,161 @@ body {
 .header {
     height: 95vh;
     background-image: linear-gradient(to right bottom,
-     rgba(126, 213, 111, 0.6),
-     rgba(40, 180, 133, 0.6))
-     , url(img/Background.jpg);
+            rgba(126, 213, 111, 0.6),
+            rgba(40, 180, 133, 0.6)), url(img/Background.jpg);
     background-size: cover;
-background-position: top;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 
-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); 
-
- 
-/* x y, x y, x y 
+    /* x y, x y, x y 
 Starting top left, this will be our reference and starting point, move clockwise. 
 Thefore, the first coordinates will be 0 0
 Second coodinates, x is 100% and Y is 0
 Third, X is the same, 100%, Y changes to 70%
 Fourth, X is the same as the first, 0, however the Y changes to the opposite, 100% */
+}
+
+
+.logo-box {
+    position: absolute;
+    top: -10px;
+    left: 30px;
+}
+
+.logo {
+    font-size: 4em;
+    color: #fff;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: #fff;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+}
+
+.hp-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* animation-delay: 2.5s; */
+    /* animation-iteration-count: 3; */
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.hp-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 17.4px;
+    animation: moveInRight 1s ease-out;
+    margin-bottom: 40px;
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    display: inline-block;
+    transition: all .2s;
+    position: relative;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+    transform: translateY(-1px);
+        box-shadow: 0 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}   
+
+.btn:hover::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: #777;
+        animation: moveInBottom .5s ease-out .75s ;
+        animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+.btn-white::after{
+     background-color: #fff;
+    color: #777; 
 }
