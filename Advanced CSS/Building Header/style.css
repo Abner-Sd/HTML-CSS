@@ -1,9 +1,10 @@
-* {
+*,
+*::after,
+*::before {
     padding: 0px;
     margin: 0px;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
-
 
 :root {
     --Lgreen: #7ed56f;
@@ -11,15 +12,19 @@
     --DGreen: #28b485;
 }
 
-
+html {
+    font-size: 62.5%;
+    /*We're divinding what we want, 10px, by the default font-size of the browser, 16px, so that the user can change the font-size if necessary without damaging our project.*/
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
-    font-size: 16px;
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+
+    box-sizing: border-box;
 }
 
 .header {
@@ -40,19 +45,18 @@ Third, X is the same, 100%, Y changes to 70%
 Fourth, X is the same as the first, 0, however the Y changes to the opposite, 100% */
 }
 
-
-.logo-box {
+.header__logo-box {
     position: absolute;
-    top: -10px;
-    left: 30px;
+    top: -1rem;
+    left: 3rem;
 }
 
-.logo {
-    font-size: 4em;
+.header__logo {
+    font-size: 5em;
     color: #fff;
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -67,11 +71,11 @@ Fourth, X is the same as the first, 0, however the Y changes to the opposite, 10
     backface-visibility: hidden;
 }
 
-.hp-main {
+.heading-primary--main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -83,11 +87,11 @@ Fourth, X is the same as the first, 0, however the Y changes to the opposite, 10
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     80% {
-        transform: translateX(10px);
+        transform: translateX(1rem);
     }
 
     100% {
@@ -96,23 +100,23 @@ Fourth, X is the same as the first, 0, however the Y changes to the opposite, 10
     }
 }
 
-.hp-sub {
+.heading-primary--sub {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 600;
-    letter-spacing: 17.4px;
+    letter-spacing: 1.74rem;
     animation: moveInRight 1s ease-out;
-    margin-bottom: 40px;
+    margin-bottom: 4rem;
 }
 
 @keyframes moveInRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     80% {
-        transform: translateX(-10px);
+        transform: translateX(-1rem);
     }
 
     100% {
@@ -125,51 +129,52 @@ Fourth, X is the same as the first, 0, however the Y changes to the opposite, 10
 .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
-    border-radius: 30px;
+    font-size: 1.6rem;
+    padding: 1.5rem 4rem;
+    border-radius: 3rem;
     display: inline-block;
     transition: all .2s;
     position: relative;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-}
-.btn:active {
-    transform: translateY(-1px);
-        box-shadow: 0 5px 2px rgba(0, 0, 0, 0.2);
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.btn::after{
+
+.btn:active {
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem .2rem rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
     content: "";
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 30px;
+    border-radius: 3rem;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
     transition: all .4s;
-}   
+}
 
-.btn:hover::after{
+.btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
 }
 
-.btn-white {
-    background-color: #fff;
-    color: #777;
-        animation: moveInBottom .5s ease-out .75s ;
-        animation-fill-mode: backwards;
+.btn--animated{
+    animation: moveInBottom .5s ease-out .75s;
+    animation-fill-mode: backwards;
 }
 
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(3rem);
     }
 
     100% {
@@ -178,8 +183,12 @@ Fourth, X is the same as the first, 0, however the Y changes to the opposite, 10
     }
 }
 
+.btn--white {
+    background-color: #fff;
+    color: #777;
+}
 
-.btn-white::after{
-     background-color: #fff;
-    color: #777; 
+.btn--white::after {
+    background-color: #fff;
+    color: #777;
 }
