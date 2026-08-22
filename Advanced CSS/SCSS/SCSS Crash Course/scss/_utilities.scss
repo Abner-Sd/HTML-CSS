@@ -1,0 +1,26 @@
+.container {
+    max-width: 1100xp;
+    padding: 0 30px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+//Margin & padding classes
+$spaceamounts: (1,2,3,4,5);
+    @each $space in spaceamounts{
+        .m-#{$space} { //'space' is acessing each of the iterations, 1 to 5
+            margin: #{$space}rem;
+        }
+
+        .my-#{$space} { //'space' is acessing each of the iterations, 1 to 5
+            margin: #{$space}rem 0;
+        }
+
+        .p-#{$space} { //'space' is acessing each of the iterations, 1 to 5
+            padding: #{$space}rem;
+        }
+
+        .py-#{$space} { //'space' is acessing each of the iterations, 1 to 5
+            padding: #{$space}rem 0;
+        }
+    }

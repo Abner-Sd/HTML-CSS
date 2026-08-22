@@ -1,0 +1,29 @@
+//The undescore tells sass to not compile this file, tell it that this file it's partial
+
+//Variables
+$bg-color: #0000ff;
+$light-color: #fff;
+$bg-btn-hot: #ffa500;
+
+$font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+//Variables  
+
+//Set text color based on background
+
+@function set-text-color($color){
+    @if(lightness($color) > 70){
+        @return #333;
+    } @else{
+@return #fff;
+    }
+}
+
+//Set background & text color
+
+@mixin set-background($color){
+background-color: $color;
+color: set-text-color($color)
+}
+
+
+

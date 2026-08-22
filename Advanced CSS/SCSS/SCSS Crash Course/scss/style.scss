@@ -1,0 +1,71 @@
+@import 'config';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $light-color;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.showcase {
+    @include set-background($bg-color);
+    height: 600px;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            list-style: none;
+        }
+
+        li {
+            padding: 15px;
+        }
+
+        a:hover {
+            color: $bg-btn-hot;
+        }
+    }
+
+    a:link {
+        color: set-text-color($bg-color);
+    }
+
+    &-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+
+        img {
+            width: 50%;
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 50px;
+            line-height: 1.2;
+        }
+    }
+}
+
+@import 'medias';
+@import 'utilities';
+@import 'buttons';
