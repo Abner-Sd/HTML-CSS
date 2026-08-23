@@ -12,14 +12,11 @@ Estou aprendendo HTML5 e CSS3, fazendo uso de cursos, livros, vídeos no youtube
 <h3>Lobe Tuour</h3>
 <a href="Challenges\FrontendPractice\Lobe Tour\index.html">Clique aqui.</a>
 
-<h3>Pulse Tuour</h3>
+<h3>Pulse</h3>
 <a href="Challenges\FrontendPractice\Pulse\index.html">Clique aqui.</a>
 
 <h3>Login Page</h3>
 <a href="Learning\Login\index.html">Clique aqui.</a>
-
-<h3>Clip Path</h3>
-<a href="Learning\Clip Path\index.html">Clique aqui.</a>
 
 <h3>Sass</h3>
 <a href="Advanced CSS\SCSS\SCSS Crash Course\index.html">Clique aqui.</a>
