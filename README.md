@@ -9,9 +9,6 @@ Estou aprendendo HTML5 e CSS3, fazendo uso de cursos, livros, vídeos no youtube
 <h3>Oh.Studio</h3>
 <a href="Challenges\FrontendPractice\Oh.studio\index.html">Clique aqui.</a>
 
-<h3>Lobe Tuour</h3>
-<a href="Challenges\FrontendPractice\Lobe Tour\index.html">Clique aqui.</a>
-
 <h3>Pulse</h3>
 <a href="Challenges\FrontendPractice\Pulse\index.html">Clique aqui.</a>
 
@@ -20,9 +17,6 @@ Estou aprendendo HTML5 e CSS3, fazendo uso de cursos, livros, vídeos no youtube
 
 <h3>Sass</h3>
 <a href="Advanced CSS\SCSS\SCSS Crash Course\index.html">Clique aqui.</a>
-
-<h3>Header</h3>
-<a href="Advanced CSS\Building Header\index.html">Clique aqui.</a>
 
 <h3>Coordel</h3>
 <a href="CursoemVideo\Desafios\Projeto cordel\index.html">Clique aqui.</a>
