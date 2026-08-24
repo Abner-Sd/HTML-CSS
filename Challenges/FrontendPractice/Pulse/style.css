@@ -24,7 +24,7 @@ header {
 
 header .headlogo {
     font-size: 3em;
-    color: var(--highlight);
+    color: var(--green);
 }
 
 header ul {
