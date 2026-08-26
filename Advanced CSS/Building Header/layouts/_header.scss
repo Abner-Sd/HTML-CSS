@@ -1,0 +1,36 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,
+            rgba(126, 213, 111, 0.6),
+            rgba(40, 180, 133, 0.6)), url(../css/Background.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+
+    /* x y, x y, x y 
+Starting top left, this will be our reference and starting point, move clockwise. 
+Thefore, the first coordinates will be 0 0
+Second coodinates, x is 100% and Y is 0
+Third, X is the same, 100%, Y changes to 70%
+Fourth, X is the same as the first, 0, however the Y changes to the opposite, 100% */
+
+    &__logo-box {
+        position: absolute;
+        top: -1rem;
+        left: 3rem;
+
+        &__logo {
+            font-size: 5em;
+            color: $white;
+        }
+    }
+
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
