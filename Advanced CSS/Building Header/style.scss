@@ -4,16 +4,20 @@
 
 @import 'components/button';
 
-@import 'layouts/header';
+@import 'layouts/header', 'layouts/grid';
 
 @import 'pages/home';
 
-
-
 //Abstract folder: code that won't output css, variables, mixins, etc.
+
 //Base folder: low level baasics. Reset, styles for html and body elements.
+
 //Components folder: reusable builnding blocks: styles-cards, buttons.
+
 //Layout folder: Holds the components togheter: header, navigation menu, main content
+
 //Pages folder: styles for differents folders of the project.
+
 //Themes folder: holds the themes of webapps
+
 //Vendors folder: third partie code.

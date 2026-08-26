@@ -1,0 +1,21 @@
+.row {
+    max-width: $grid-width; //1140px é o padrão.
+    background-color: #ff5366;
+    margin: 0 auto;
+
+    &:not(:last-child) {
+        //Selecting everything except the last child
+        margin-bottom: $gutter-vertical;
+    }
+
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) / 2);
+        background-color: #ff4500;
+        float: left;
+
+        &:not(:last-child) {
+            //Selecting everything except the last child
+            margin-right: $gutter-horizontal;
+        }
+    }
+}
