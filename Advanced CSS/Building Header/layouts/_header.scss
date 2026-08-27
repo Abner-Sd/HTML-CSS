@@ -17,12 +17,11 @@ Fourth, X is the same as the first, 0, however the Y changes to the opposite, 10
 
     &__logo-box {
         position: absolute;
-        top: -1rem;
-        left: 3rem;
+        top: 4rem;
+        left: 4rem;
 
         &__logo {
-            font-size: 5em;
-            color: $color-white;
+            height: 3.5rem;
         }
     }
 
