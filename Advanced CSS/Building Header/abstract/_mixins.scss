@@ -1,0 +1,7 @@
+@mixin clearfix{//the height collapses when the element is floated
+    &::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
