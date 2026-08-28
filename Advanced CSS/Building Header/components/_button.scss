@@ -47,11 +47,11 @@
 
     &--white {
         background-color: $color-white;
-        color: $dark-grey;
+        color: $color-grey-dark;
 
         &::after {
             background-color: $color-white;
-            color: $dark-grey;
+            color: $color-grey-dark;
         }
     }
 }
@@ -61,16 +61,16 @@
     &:link,
     &:visited {
         font-size: $default-font-size;
-        color: $light-green;
+        color: $color-primary-light;
         display: inline-block;
         text-decoration: none;
-        border-bottom: 1px solid $light-green;
+        border-bottom: 1px solid $color-primary-light;
         padding: 3px;
         transition: all 2s;
     }
 
     &:hover {
-        background-color: $light-green;
+        background-color: $color-primary-light;
         color: $color-white;
         box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
         transform: translateY(-2px);
