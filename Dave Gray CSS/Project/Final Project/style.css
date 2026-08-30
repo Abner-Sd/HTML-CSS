@@ -7,7 +7,6 @@
     box-sizing: border-box;
 }
 
-
 img {
     display: block;
     max-width: 100%;
@@ -252,6 +251,11 @@ a:active {
 
 .about__trivia-answer {
     margin-top: 1em;
+}
+
+figcaption{
+    text-align: center;
+    font-size: 15px;
 }
 
 /*CONTACT*/

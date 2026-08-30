@@ -1,8 +1,8 @@
 //media mobile
-@media (max-width: 700px){
+@media (max-width: 600px){
     .showcase{
-        height: 450px;
-
+        height: 65vh;
+        min-width: 340px;
         &-content{
             text-align: center;
 
@@ -13,7 +13,7 @@
 
         .logo{
             font-size: 16px;
-            font-weight: 900;
+            white-space: nowrap;
         }
 
         &-content{

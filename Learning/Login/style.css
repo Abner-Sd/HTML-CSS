@@ -5,6 +5,10 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -16,41 +20,50 @@ body {
 }
 
 header {
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 100px;
-    display: flex;
-    justify-content: space-between;
+    padding: 2rem 10rem;
+   
     align-items: center;
     z-index: 99;
 }
 
+ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
+     align-items: center;
+}
+
 .logo {
-    font-size: 2em;
+    font-size: 4rem;
     user-select: none;
     color: #fff;
 }
 
 .navigation a {
     position: relative;
-    font-size: 1.1em;
+    font-size: 2rem;
     color: #ffff;
     text-decoration: none;
-    font-weight: 500px;
-    margin-left: 40px;
+    font-weight: 500;
+    margin-left: 4rem;
 }
 
 .navigation a::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -6px;
+    bottom: -.6rem;
     width: 100%;
-    height: 3px;
+    height: .3rem;
     background-color: #f5f5f5;
-    border-radius: 5px;
+    border-radius: .5rem;
     transform-origin: right;
     transform: scaleX(0);
     transition: transform .5s;
@@ -62,17 +75,17 @@ header {
 }
 
 .navigation .btnLogin-popup {
-    width: 130px;
-    height: 50px;
+    width: 13rem;
+    height: 5rem;
     background-color: transparent;
     border: 2px solid #fff;
     outline: none;
     color: #fff;
-    border-radius: 6px;
+    border-radius: .6rem;
     cursor: pointer;
-    font-size: 1.1em;
-    font-weight: 500px;
-    margin-left: 40px;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 4rem;
     transition: 5s;
 }
 
@@ -84,12 +97,12 @@ header {
 
 .wrapper {
     position: relative;
-    width: 400px;
-    height: 440px;
+    width: 40rem;
+    height: 44rem;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, .5);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
+    border-radius: 2rem;
+    backdrop-filter: blur(2rem);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
@@ -99,17 +112,17 @@ header {
     transition: transform .5s ease, height .2s ease;
 }
 
-.wrapper.active-popup{
-     transform: scale(1); 
+.wrapper.active-popup {
+    transform: scale(1);
 }
 
 .wrapper.active {
-    height: 520px;
+    height: 52rem;
 }
 
 .wrapper .form-box {
     width: 100%;
-    padding: 40px;
+    padding: 4rem;
 }
 
 .wrapper .form-box.login {
@@ -137,21 +150,21 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    width: 45px;
-    height: 45px;
+    width: 4.5rem;
+    height: 4.5rem;
     background-color: #162938;
-    font-size: 2em;
+    font-size: 2rem;
     color: #f5f5f5;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom-left-radius: 20px;
+    border-bottom-left-radius: 2rem;
     cursor: pointer;
     z-index: 1;
 }
 
 .form-box h2 {
-    font-size: 2em;
+    font-size: 4rem;
     color: #162938;
     text-align: center;
 }
@@ -159,8 +172,8 @@ header {
 .input-box {
     position: relative;
     width: 100%;
-    height: 50px;
-    margin: 30px 0;
+    height: 5rem;
+    margin: 3rem 0;
     border-bottom: 2px solid #162938;
 }
 
@@ -169,7 +182,7 @@ header {
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    font-size: 1em;
+    font-size: 2rem;
     color: #162938;
     font-weight: 500;
     pointer-events: none;
@@ -178,10 +191,9 @@ header {
 
 .input-box input:focus~label,
 .input-box input:valid~label
-
-/* Quando selecionado, joga o texto, "EmaiL" e "password" para cima */
     {
     top: -5px;
+    /* Quando selecionado, joga o texto, "EmaiL" e "password" para cima */
 }
 
 .input-box input {
@@ -190,22 +202,22 @@ header {
     background: transparent;
     border: none;
     outline: none;
-    font-size: 1em;
+    font-size: 2rem;
     color: #162938;
     font-weight: 600;
-    padding: 0 35px 0 5px;
+    padding: 0 3.5rem 0 .5rem;
 }
 
 .input-box .icon {
     position: absolute;
     right: 8px;
-    font-size: 1.2em;
+    font-size: 2rem;
     color: #162938;
     line-height: 57pp;
 }
 
 .remember-forgot {
-    font-size: .9em;
+    font-size: 2rem;
     color: #162938;
     font-weight: 500;
     margin: -15px 0 15px;
@@ -215,7 +227,7 @@ header {
 
 .remember-forgot label input {
     accent-color: #162938;
-    margin-right: 3px;
+    margin-right: .3rem;
 }
 
 .remember-forgot a {
@@ -229,25 +241,24 @@ header {
 
 .btn {
     width: 100%;
-    height: 45px;
+    height: 4.5rem;
     background-color: #162938;
     border: none;
     outline: none;
-    border-radius: 6px;
+    border-radius: .6rem;
     cursor: pointer;
     color: #f5f5f5;
-    font-size: 1em;
+    font-size: 2rem;
     font-weight: 500;
 }
 
 .login-register {
-    font-size: .9em;
+    font-size: 2rem;
     color: #162938;
     text-align: center;
     font-weight: 500;
-    margin: 25px 0 10px;
+    margin: 2.5rem 0 1rem;
 }
-
 
 .login-register p a {
     color: #162938;
@@ -257,4 +268,43 @@ header {
 
 .login-register p a:hover {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 740px) {
+    header{
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+  
+.navigation a{
+    visibility: hidden;
+}
+
+.btnLogin-popup{
+   position: relative;
+   left: -21rem;
+   top: 1rem;
+}
+
+.wrapper,
+.wrapper.active{
+    height: 40rem;
+}
+
+.form-box.register h2{
+    position: relative;
+    top: 2.3rem;
+    font-size: 3rem;
+}
+
+.form-box.register .login-register{
+position: relative;
+top: -1rem;
+font-size: 1.5rem;
+}
+
 }

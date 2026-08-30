@@ -3,7 +3,7 @@ Estou aprendendo HTML5 e CSS3, fazendo uso de cursos, livros, vídeos no youtube
 
 <h2>Exercícios: </h2>
 
-<h2>SASS</h2>
+<h2>Mike Smith - SASS</h2>
 <a href="Advanced CSS\SCSS\CodeCamp\Project\index.html">Clique aqui.</a>
 
 <h3>Pulse</h3>
@@ -12,13 +12,10 @@ Estou aprendendo HTML5 e CSS3, fazendo uso de cursos, livros, vídeos no youtube
 <h3>Oh.Studio</h3>
 <a href="Challenges\FrontendPractice\Oh.studio\index.html">Clique aqui.</a>
 
-<h3>Pulse</h3>
-<a href="Challenges\FrontendPractice\Pulse\index.html">Clique aqui.</a>
-
 <h3>Login Page</h3>
 <a href="Learning\Login\index.html">Clique aqui.</a>
 
-<h3>Sass</h3>
+<h3>Marketing - Sass</h3>
 <a href="Advanced CSS\SCSS\SCSS Crash Course\index.html">Clique aqui.</a>
 
 <h3>Coordel</h3>
