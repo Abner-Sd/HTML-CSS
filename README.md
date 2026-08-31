@@ -3,6 +3,9 @@ Estou aprendendo HTML5 e CSS3, fazendo uso de cursos, livros, vídeos no youtube
 
 <h1>Projetos: </h1>
 
+<h2>Outdoors - scss</h2>
+<a href="Advanced CSS\Building Header\index.html">Clique aqui.</a>
+
 <h2>Mike Smith - scss</h2>
 <a href="Advanced CSS\SCSS\CodeCamp\Project\index.html">Clique aqui.</a>
 
