@@ -1,0 +1,1 @@
+*,*::after,*::before{padding:0px;margin:0px;box-sizing:inherit}html{font-size:62.5%}.main{position:relative;width:100%;height:100vh}.container{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);border:1px solid #000}.container__input{display:none}.container__label{color:#fff}.container__icon{position:relative;margin:3.5rem}
