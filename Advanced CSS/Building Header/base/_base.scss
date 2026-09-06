@@ -9,6 +9,25 @@
 html {
     font-size: 62.5%;
     /*We're divinding what we want, 10px, by the default font-size of the browser, 16px, so that the user can change the font-size if necessary without damaging our project. Defines what 1rem is.*/
+
+    /* Media querie 1  
+   @include respond-phone{
+        font-size: 50%;
+    } */
+
+ 
+    @include respond(tab-land) { //width < 900?
+        font-size: 56.25%; //1 rem = 9px, 8/9 = 56.25%
+    }
+
+       @include respond(tab-port) {//width < 600?
+        font-size: 50%; //1 rem = 8px, 8/16 = 50%
+    }
+
+
+    @include respond(big-deskot) {
+        font-size: 75%; // 1rem = 12px, 12/16 = 75%
+    }
 }
 
 body {
