@@ -2,9 +2,18 @@
     max-width: $grid-width; //1140px é o padrão.
     margin: 0 auto;
 
+    @include respond(tab-port){
+        max-width: 50%;
+        padding: 0 3rem;
+    }
+
     &:not(:last-child) {
         //Selecting everything except the last child
         margin-bottom: $gutter-vertical;
+
+        @include respond(tab-port){
+            margin-bottom: $gutter-vertical-small;
+        }
     }
 
     @include clearfix;
@@ -15,6 +24,16 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include respond(tab-port){
+            margin-right: 0;
+            margin-bottom: $gutter-vertical-small;
+
+        }
+        }
+
+        @include respond(tab-port){
+            width: 100% !important;
         }
     }
 

@@ -6,14 +6,18 @@
     background-size: cover;
     background-position: top;
     position: relative;
-    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
     /* x y, x y, x y 
 Starting top left, this will be our reference and starting point, move clockwise. 
 Thefore, the first coordinates will be 0 0
 Second coodinates, x is 100% and Y is 0
 Third, X is the same, 100%, Y changes to 70%
-Fourth, X is the same as the first, 0, however the Y changes to the opposite, 100% */
+Fourth, X is the same as the first, 0, but the Y changes to the opposite, 100% */
+
+@include respond(phone){
+ clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
 
     &__logo-box {
         position: absolute;
