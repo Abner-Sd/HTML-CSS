@@ -24,13 +24,19 @@
     &__shape {
         height: 15rem;
         width: 15rem;
+        -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         //Defines how the content shapes around the shape. The first number is the radius of the circle, being 50%, the element radius will be half of the width and half of the height; Second and third numbers mean the center, 50% 50% means exactly the center vercaly and horizontaly
-        clip-path: circle(50% at 50% 50%);
+
         float: left;
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+        overflow: hidden;
 
+        @supports(clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+        }
 
         @include respond(phone) {
             transform: translateX(-3rem) skewX(0);
