@@ -38,7 +38,7 @@ var job = 'programmer'
 job = 'teacher'
 */
 
-/*      Basic Operators */
+/*      Basic Operators 
 
 let currentYear = 2037;
 const ageJonas = currentYear - 1991;
@@ -48,3 +48,27 @@ console.log(ageJonas, ageSara);
 
 console.log(ageJonas * 2, ageJonas / 10, 2 **3);
 //2 ** 3 means 2 to the power of 3
+
+const firstName = 'Jonas';
+const lastName = 'Schmedtmann'
+
+console.log(firstName + ' ' + lastName);
+
+
+let x = 10 + 5; // 15
+x += 10; // x = x + 10 = 25
+x *= 4; // x = x * 4 = 100
+x++; // x = x + 1
+x--;
+x--;
+console.log(x);
+
+// Comparison operators
+console.log(ageJonas > ageSarah); // >, <, >=, <=
+console.log(ageSarah >= 18);
+
+const isFullAge = ageSarah >= 18;
+
+console.log(now - 1991 > now - 2018);
+
+*/
