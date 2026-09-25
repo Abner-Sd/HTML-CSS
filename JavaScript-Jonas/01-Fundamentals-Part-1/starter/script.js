@@ -39,3 +39,12 @@ job = 'teacher'
 */
 
 /*      Basic Operators */
+
+let currentYear = 2037;
+const ageJonas = currentYear - 1991;
+const ageSara = currentYear - 2018;
+
+console.log(ageJonas, ageSara);  
+
+console.log(ageJonas * 2, ageJonas / 10, 2 **3);
+//2 ** 3 means 2 to the power of 3
