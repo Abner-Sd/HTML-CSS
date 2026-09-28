@@ -79,7 +79,7 @@ console.log(x ,y);
 const averageAge = (ageJonas + ageSara) / 2;
 console.log(ageJonas, ageSara, averageAge);*/
 
-/* --------------------Coding Challenge 1-------------------------- 
+/* -----Coding Challenge 1----- 
 
 1. Store Mark's and John's mass and height in
 variables
@@ -154,7 +154,7 @@ if(birthYear <= 2000){
 console.log(century);
  */
 
-/* --------------------Coding Challenge 2-------------------------- 
+/* -----Coding Challenge 2----- 
 Use the BMI example from Challenge #1, and the code
 you already wrote, and improve it:
 
@@ -187,7 +187,7 @@ if (BMIMark > BMIJohn) {
 
 */
 
-/*    Lesson 6 - Type Conversion and Coercion
+/*    Lesson 7 - Type Conversion and Coercion
 
 //Type conversion - manually convert from one type to another
 //Type coercion - Js does it automatically
@@ -205,4 +205,72 @@ console.log('I am 23 years old');
 console.log('23' - '10' - 3);
 console.log('23' / '2');*/
 
-/*    Lesson 7 - Truthy and Falsy Valeus */
+/*    Lesson 8 - Truthy and Falsy Values 
+
+// falsy values: 0, '', undefined, null, NaN. Will be converted to FALSE
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean(''));
+console.log(Boolean({}));
+
+
+let money = 0; //if-else works only in boolean values, js will coerce the value of the number
+
+if(money){
+  console.log("Don't spend it all");
+} else{
+  console.log("You should get a job");
+}
+  */
+
+/*    Lesson 9 - Equality Operators: == VS. === 
+
+//== loose equality: perform a type coercion when comparing two values
+//=== strict equality: will not perform the coercion when comparing values
+
+const a = 100;
+const b = '100';
+console.log(a == b);
+console.log(a === b);
+*/
+
+/*    Lesson 10 - Boolean Logic  
+//Basic Booleand Operators: AND, OR and NOT Operators
+//AND &&, OR ||, NOT !
+
+const hasDriversLicense = true //A
+const hasGoodVision = true //B
+
+console.log(hasDriversLicense && hasGoodVision);
+console.log(hasDriversLicense || hasGoodVision);
+console.log(!hasDriversLicense);
+
+// if (hasDriversLicense && hasGoodVision) {
+// console.log("Sara is able to drive!");
+//} else {
+//  console.log("Someone else shoud drive...");
+//} 
+
+const isTired = false; //C
+console.log(hasDriversLicense && hasGoodVision && isTired);
+
+if (hasDriversLicense && hasGoodVision && !isTired) {
+  console.log("Sara is able to drive!");
+} else {
+  console.log("Someone else shoud drive...");
+}
+*/
+
+/* -----Coding Challenge 2----- 
+There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins the a trophy!
+
+1. Calculate the average score for each team, using the test data below
+2. Compare the team's average scores to determine the winner of the competition, and print it to the console. Don't forget that there can be a draw, so test for that as well (draw means they have the same average score).
+
+3. BONUS 1: Include a requirement for a minimum score of 100. With this rule, a team only wins if it has a higher score than the other team, and the same time a score of at least 100 points. HINT: Use a logical operator to test for minimum score, as well as multiple else-if blocks 
+4. BONUS 2: Minimum score also applies to a draw! So a draw only happens when both teams have the same score and both have a score greater or equal 100 points. Otherwise, no team wins the trophy.
+
+TEST DATA: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
+TEST DATA BONUS 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
+TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106 */
