@@ -262,7 +262,7 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
 }
 */
 
-/* -----Coding Challenge 2----- 
+/* -----Coding Challenge 3-----   
 There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins the a trophy!
 
 1. Calculate the average score for each team, using the test data below
@@ -273,4 +273,113 @@ There are two gymnastics teams, Dolphins and Koalas. They compete against each o
 
 TEST DATA: Dolphins score 96, 108 and 89. Koalas score 88, 91 and 110
 TEST DATA BONUS 1: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 123
-TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106 */
+TEST DATA BONUS 2: Dolphins score 97, 112 and 101. Koalas score 109, 95 and 106
+
+const dolphinAverage = (96 + 108 + 89)/3;
+const koalasAverage = (88 + 91 + 110)/3;
+console.log(dolphinAverage, koalasAverage)
+
+if(dolphinAverage > koalasAverage){
+  console.log(`Dolphins win the trohy with a score of ${dolphinAverage}`)
+} else if(koalasAverage > dolphinAverage){
+  console.log(`Koalas win the trohy with a score of ${koalasAverage}`)
+} else if(koalasAverage ===dolphinAverage){
+  console.log("Both win the trothy")
+} 
+
+  //BONUS 1  
+const dolphinAverage = (97 + 112 + 101)/3;
+const koalasAverage = (109 + 95 + 112)/3;
+console.log(dolphinAverage, koalasAverage)
+
+if(dolphinAverage > koalasAverage && dolphinAverage >= 100){
+  console.log(`Dolphins win the trohy with a score of ${dolphinAverage}`)
+} else if(koalasAverage > dolphinAverage && koalasAverage >= 100){
+  console.log(`Koalas win the trohy with a score of ${koalasAverage}`)
+} else if(koalasAverage===dolphinAverage){
+  console.log("Both win the trothy")
+} 
+
+//BONUS 2
+ const dolphinAverage = (97 + 112 + 101)/3;
+const koalasAverage = (109 + 95 + 106)/3;
+console.log(dolphinAverage, koalasAverage)
+
+if(dolphinAverage > koalasAverage && dolphinAverage >= 100){
+  console.log(`Dolphins win the trohy with a score of ${dolphinAverage}`)
+} else if(koalasAverage > dolphinAverage && koalasAverage >= 100){
+  console.log(`Koalas win the trohy with a score of ${koalasAverage}`)
+} else if(koalasAverage===dolphinAverage && koalasAverage >= 100 && dolphinAverage >= 100){
+  console.log("Both win the trothy")
+}  */
+
+/*    Lesson 11 - Switch Statement
+
+//Simply terms, it compares one value to multiple different options
+
+const day = 'monday'
+
+switch(day){
+  case 'monday':
+    console.log("Plan couse structure");
+    console.log("Go to coding meetup");
+    break;
+
+  case 'tuesday':
+    console.log("Prepare theory videos");
+    break;
+
+  case 'wednesday':
+  case 'thursday':
+    console.log("Code examples");
+    break
+    
+  case 'friday':
+    console.log("Record videos")
+    break;
+  
+  case 'saturday':
+  case 'sunday':
+    console.log("Enjoy the weekend");
+
+  default:
+    console.log("Not a valid day!")
+}*/
+
+/*    Lesson 12 - Statements and Expressions
+//Expression: piece of code that produces a value. Ex: 3+4; true && false; 1991.
+
+//Statments: bigger piece of code and does not produce values. Ex: if-else, switch. 
+*/
+
+/*    Lesson 13 - Conditional Operator (ternary)
+
+const age = 23;
+//age >= 18 ? console.log("I like to dring wine") : console.log("I like to drink water") 
+// //After the '?' is where your statment of the 'if' will go (?=if), after the ':' is where your 'else' will go (:=else).
+
+const drink = age >= 18  ? "wine" : "water";
+console.log(drink);
+
+let drink2;
+if (age >=18){
+  drink2 = 'wine';
+} else{
+  drink2 = 'water';
+}
+console.log(drink2);
+
+console.log(`I like to drink ${age >= 18  ? "wine" : "water"}`);
+*/
+
+/* -----Coding Challenge 4-----
+Steven wants to build a very simple tip calculator for whenever he goes eating in a resturant. In his country, it's usual to tip 15% if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+
+1. Your task is to caluclate the tip, depending on the bill value. Create a variable called 'tip' for this. It's not allowed to use an if/else statement 😅 (If it's easier for you, you can start with an if/else statement, and then try to convert it to a ternary operator!)
+2. Print a string to the console containing the bill value, the tip, and the final value (bill + tip). Example: 'The bill was 275, the tip was 41.25, and the total value 316.25'
+
+TEST DATA: Test for bill values 275, 40 and 430
+
+HINT: To calculate 20% of a value, simply multiply it by 20/100 = 0.2
+HINT: Value X is between 50 and 300, if it's >= 50 && <= 300 😉
+*/
