@@ -193,3 +193,7 @@ const ages = [calcAge(years[0]), calcAge(years[2]), calcAge(years[years.length -
 console.log(ages);*/
 
 /*      Lesson 8 - Basic Array operation (methods)*/
+const friends = ['Michael', 'Steven', 'Peter'];
+//Push method adds elements to the end of the array
+friends.push('Jay');
+console.log(friends);
