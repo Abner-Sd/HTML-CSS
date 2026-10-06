@@ -1,34 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Primeiro Passos com DOM</title>
     <style>
-        body{
+        body {
             background-color: grey;
             font: normal 18pt Arial;
         }
     </style>
 </head>
+
 <body>
-    <h1>Iniciando estudos <strong>DOM</strong></h1>
+    <h1>Iniciando estudos DOM</h1>
     <p>Aqui vai o resultado</p>
-    <div>Click em mim</div>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Click em mim</div>
 
     <script>
-        window.document.write("Olá, mundo")
-        /* Seletores: */
-var p1 = window.document.getElementsByTagName('p')
-        //Por Marca
+        /*         window.document.write("Olá, mundo")
+         */        /* Seletores: */
+    //Por Marca window.document.getElementsByTagName
+      var corpo = window.document.body;
+        var p1 = window.document.getElementsByTagName('p')[1];
+        /*   window.document.write("Está escrito assim: " + p1.innerText + '.');
+        window.document.write(" Está escrito assim: " + p1.innerHTML);
 
-        //por ID
+        corpo.style.background = 'darkgrey';
+        p1.style.color = 'purple'; */
 
-        //por Nome
+    //por ID window.document.getElementById
+        /* var d = window.document.getElementById('msg');
+        d.style.background= 'green';
+        d.innerText = 'Estou aguardando'; */
 
-        //por Classe
+    //por Nome window.document.getElementsByName
+      /*   var div = window.document.getElementsByName('msg')[0];
+        d.innerText = 'Ainda estou esperando'; */
 
-        //por Seletor
+    //por Classe window.document.getElementsByClassName()
+
+    //por Seletor querySelector() / querySelectorAll()
+    var d = window.document.querySelector('div#msg');
+    d.style.color = 'blue';
+
     </script>
 </body>
+
 </html>
