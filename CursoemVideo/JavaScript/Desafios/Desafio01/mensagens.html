@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio das Mensagens</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+
+        .bot {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Desafio das Mensagens</h1>
+
+    <input type="button" value="Botão 1" class="bot" id="bot1" onclick="bot('1')">
+    <input type="button" value="Botão 2" class="bot" id="bot2" onclick="bot('2')">
+    <input type="button" value="Botão 3" class="bot" id="bot3" onclick="bot('3')">
+
+
+    <script>
+        function bot(botão) {
+           window.alert(`Você clicou no botão ${botão}!`);
+        }
+
+    </script>
+</body>
+
+</html>

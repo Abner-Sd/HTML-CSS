@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troco</title>
+    <style>
+        body {
+            background-color: grey;
+        }
+         input{
+            background-color: whitesmoke;
+            padding: 20px;
+            font-size: 20px;
+            border-radius: 5xp;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculando Troco
+    </h1>
+
+<input type="button" value="Comprar Produto" onclick="comprar()">
+<p>Clique no botão acima para iniciar.</p>
+    <script>
+function comprar(){
+    let produto =  prompt("Qual produto você está comprando?");
+    let valor = prompt(`Quanto custa o ${produto} que você está comprando?`);
+    let dinheiro = prompt(`Qual foi o valor que você deu para pagar o ${produto}?`)
+    let troco = Number(dinheiro) - Number(valor);
+
+    if(valor > dinheiro){
+        window.alert(`Você comprou ${produto} que custou R$${valor},00.
+        Deu R$${dinheiro},00 em dinheiro, mas não foi o suficiente para pagar pelo produto, ficou faltando R$${(troco * -1)},00. Por favor, complete todo o pagamento pra continuar a compra.`)
+    } else{
+        window.alert(`
+        Você comprou ${produto} que custou R$${valor},00.
+        Deu R$${dinheiro},00 em dinheiro e vai receber R$${troco},00 de troco. 
+        Volte Sempre.`)
+    }
+
+}
+    </script>
+</body>
+</html>
