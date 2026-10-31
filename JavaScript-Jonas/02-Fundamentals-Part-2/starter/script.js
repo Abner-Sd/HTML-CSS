@@ -195,5 +195,5 @@ console.log(ages);*/
 /*      Lesson 8 - Basic Array operation (methods)*/
 const friends = ['Michael', 'Steven', 'Peter'];
 //Push method adds elements to the end of the array
-friends.push('Jay');
+friends.push('Jay'); //Adds elements
 console.log(friends);
