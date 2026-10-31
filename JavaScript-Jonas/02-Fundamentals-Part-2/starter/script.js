@@ -192,8 +192,61 @@ console.log(age1, age2, age3);
 const ages = [calcAge(years[0]), calcAge(years[2]), calcAge(years[years.length - 1])];
 console.log(ages);*/
 
-/*      Lesson 8 - Basic Array operation (methods)*/
+/*      Lesson 8 - Basic Array operation (methods)
 const friends = ['Michael', 'Steven', 'Peter'];
-//Push method adds elements to the end of the array
-friends.push('Jay'); //Adds elements
+friends.push('Jay'); //Adds elements to the end of the array
 console.log(friends);
+friends.unshift('John');
+console.log(friends); //Adds elements to the beggining of the array
+
+//Remove elements
+const popped = friends.pop();//remove the last element of the array
+console.log(popped);
+console.log(friends);
+
+friends.shift(); //remove the first element from the array
+console.log(friends);
+
+
+//Array positions
+console.log(friends.indexOf('Steven')); //Shows in witch position the element is
+console.log(friends.indexOf('Bob'));
+
+//Show if the element is in the array. It's a boolean value and it's a strict type of cheking.
+friends.push(23)
+console.log(friends.includes('Steven'))//true
+console.log(friends.includes('Bob'));//false
+console.log(friends.includes('23'));//false
+console.log(friends.includes(23));//true
+
+
+if(friends.includes('Steven')){
+    console.log("You have a friend called Steven");
+}*/
+
+/* ---------Coding Challenge 1-------------- 
+Steven is still building his tip calculator, using the same rules as before: Tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+
+1. Write a function 'calcTip' that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+2. And now let's use arrays! So create an array 'bills' containing the test data below.
+3. Create an array 'tips' containing the tip value for each bill, calculated from the function you created before.
+4. BONUS: Create an array 'total' containing the total values, so the bill + tip.
+
+TEST DATA: 125, 555 and 44
+
+HINT: Remember that an array needs a value in each position, and that value can actually be the returned value of a function! So you can just call a function as array values (so don't store the tip values in separate variables first, but right in the new array) 
+*/ 
+
+
+
+
+const bill = 430;
+/* if(bill <=300 && bill >=50){
+    let tip = bill * 0.15;
+} else{
+    let tip = bill * 0.2;
+} */
+
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
