@@ -401,4 +401,31 @@ if (mark.bmi > john.bmi) {
     console.log(`${john.fullName}"s BMI (${john.bmi}) is higher than ${mark.fullName}"s BMI (${mark.bmi})`)
 }*/
 
-/*      Lesson 11 - Iretation: the FOR loop */
+/*      Lesson 11 - Iretation: the FOR loop
+
+console.log('Lifting weights repetition 1');
+console.log('Lifting weights repetition 2');
+console.log('Lifting weights repetition 3');
+console.log('Lifting weights repetition 4');
+console.log('Lifting weights repetition 5');
+console.log('Lifting weights repetition 6');
+console.log('Lifting weights repetition 7');
+console.log('Lifting weights repetition 8');
+console.log('Lifting weights repetition 9');
+console.log('Lifting weights repetition 10');
+
+
+for(let rep = 1;rep <= 5; rep++){
+    console.log(`Lifiting weights repeetition ${rep}`);
+}
+ */
+
+/*      Lesson 12 - Looping arrays - Breaking and Continuing */
+
+const jonasArray = [
+    'Jonas',
+    'Schemedtamn',
+    2037 - 1991,
+    'teacher',
+    ['Micheal', 'Peter', 'Steven']
+];
