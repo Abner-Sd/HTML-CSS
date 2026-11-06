@@ -420,12 +420,80 @@ for(let rep = 1;rep <= 5; rep++){
 }
  */
 
-/*      Lesson 12 - Looping arrays - Breaking and Continuing */
+/*      Lesson 12 - Looping arrays - Breaking and Continuing 
 
-const jonasArray = [
+const jonas = [
     'Jonas',
     'Schemedtamn',
     2037 - 1991,
     'teacher',
-    ['Micheal', 'Peter', 'Steven']
+    ['Micheal', 'Peter', 'Steven'],
+    true
 ];
+
+const types = [];
+
+ for(let i = 0; i < jonas.length ; i++){
+    // Reading from jonas array
+    console.log(jonas[i], typeof jonas[i]);
+
+  // Filling types array
+  //types[i] = typeof jonas[i];
+  types.push(typeof jonas[i]); 
+ }
+
+console.log(types)
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++){
+    ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+//Continue and break
+
+//Continue = acces the current iteration and continues, skipping past some iteration
+//Break = terminates the loop
+
+const jonas = [
+    'Jonas',
+    'Schemedtamn',
+    2037 - 1991,
+    'teacher',
+    ['Micheal', 'Peter', 'Steven'],
+    true
+];
+
+console.log('--- ONLY STRINGS ---')
+for(let i = 0; i < jonas.length ; i++){
+if(typeof jonas[i] !== 'string') continue;
+
+    console.log(jonas[i], typeof jonas[i]);
+ }
+
+//After number is found, nothing should be printed
+console.log('--- BREAK WITH NUMBER ---')
+for(let i = 0; i < jonas.length ; i++){
+if(typeof jonas[i] === 'number') break;
+
+    console.log(jonas[i], typeof jonas[i]);
+ }
+*/
+
+/*     Lesson 13 - Looping backwards and loops in loops  */
+
+const jonas = [
+    'Jonas',
+    'Schemedtamn',
+    2037 - 1991,
+    'teacher',
+    ['Micheal', 'Peter', 'Steven'],
+];
+
+for (let i = jonas.length - 1; i >= 0; i --){
+    console.log(jonas[i]);
+
+} 
