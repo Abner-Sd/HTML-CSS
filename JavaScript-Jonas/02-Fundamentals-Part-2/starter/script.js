@@ -491,9 +491,9 @@ const jonas = [
     2037 - 1991,
     'teacher',
     ['Micheal', 'Peter', 'Steven'],
+    true
 ];
 
-for (let i = jonas.length - 1; i >= 0; i --){
-    console.log(jonas[i]);
-
+for (let i = jonas.length - 1; i >= 0; i --){ //Looping backwards
+    console.log(i, jonas[i]);
 } 
